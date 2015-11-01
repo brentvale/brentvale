@@ -1,0 +1,133 @@
+body{
+  margin:0;
+}
+a{
+  font: 13px/15px "Raleway", sans-serif;
+}
+.center-block{
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+h1{
+  font: 18px/20px "Raleway", sans-serif;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+h2{
+  font: 18px/20px "Raleway", sans-serif;
+  text-align:center;
+}
+/* NAVIGATION */
+#navbar{
+  height:60px;
+  width:100%;
+  border-bottom:1px solid;
+}
+#navLogo{
+  display:inline-block;
+  padding: 20px;
+  line-height:20px;
+}
+
+#navLinks{
+  list-style-type: none;
+  float:right;
+  margin-right:30px;
+}
+#navLinks li, a{
+  display:inline-block;
+  text-align:center;
+}
+#navLinks li a{
+  font: 14px/16px "Raleway", sans-serif;
+  padding:10px;
+  width:40px;
+  text-decoration:none;
+  color:black;
+}
+#navLinks li a:hover{
+  font: 14px/16px "Raleway Ultra-Bold", sans-serif;
+  cursor:hand;
+  cursor:pointer;
+  letter-spacing:.4px;
+}
+#navLinks li::after{
+    display:block;
+    height:1px;
+    color:transparent;
+    overflow:hidden;
+    visibility:hidden;
+    margin-bottom:-1px;
+}
+/* MAIN INTRO */
+#jobTitle span{
+  width: 8px;
+  height: 20px;
+  display:inline-block;
+  margin-left:2px;
+  position:absolute;
+}
+span.active{
+  background-color:black;
+}
+span.inactive{
+  background-color:white;
+}
+/* PROJECTS */
+#projectsContainer{
+  width:80%;
+}
+@media screen and (max-width: 769px){
+  .project-container{
+    width:99%;
+  }
+}
+@media screen and (min-width: 769px){
+  .project-container{
+    width:49%;
+  }
+}
+@media screen and (min-width: 1200px){
+  .project-container{
+    width:33%;
+  }
+}
+.project-container{
+  display:inline-block;
+  height:400px;
+  position:relative;
+  vertical-align:top
+}
+.project-title{
+  text-align:center;
+  font: 16px/18px "Raleway", sans-serif;
+  position:relative;
+}
+.project-description{
+  font: 14px/20px "Raleway", sans-serif;
+  text-align:center;
+  width:90%;
+}
+.project-image-container{
+  width:200px;
+  height:200px;
+  background-size:cover;
+  border-radius: 5px;
+}
+.links{
+  text-align:center;
+}
+#flappyDragon{
+  background-image: url(../images/Flappy_Dragon_Screen_Shot.png);
+}
+#minesweeper{
+  background-image: url(../images/Minesweeper.png);
+}
+#proact{
+  background-image: url(../images/ProAct_Facebook_App_for_web.jpg);
+}
+#neonatalResuscitation{
+  background-image: url(../images/neonatal_hr_acquisition.png);
+}
