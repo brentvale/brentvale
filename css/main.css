@@ -96,7 +96,7 @@ span.inactive{
 }
 .project-container{
   display:inline-block;
-  height:400px;
+  height:450px;
   position:relative;
   vertical-align:top
 }
@@ -111,10 +111,25 @@ span.inactive{
   width:90%;
 }
 .project-image-container{
-  width:200px;
-  height:200px;
+  width:250px;
+  height:250px;
   background-size:cover;
   border-radius: 5px;
+  background-position:top left;
+  background-repeat: no-repeat;
+  border:1px solid #333;
+}
+.project-image-container:hover{
+  opacity:50%;
+  cursor: pointer;
+  cursor: hand;
+  content: "<div class='opacity-layer'></div>";
+}
+.opacity-layer{
+  height:100%;
+  width:100%;
+  background-color:white;
+  opacity:50%;
 }
 .links{
   text-align:center;

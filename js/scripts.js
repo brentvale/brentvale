@@ -64,10 +64,12 @@ $(function(){
     // setTimeout(playIntroSequence, 2000);
   });
   
-  // $("#navLinks li a").click(function(){
-//     $("html, body").animate({
-//       scrollTop: $("#")
-//     });
-//   });
+  $("#navLinks li a").click(function(e){
+    e.preventDefault();
+    var scrollToId = $(e.currentTarget).attr("href");
+    $("html, body").animate({
+      scrollTop: $(scrollToId).offset().top - 20
+    }, 1000);
+  });
   
 });
