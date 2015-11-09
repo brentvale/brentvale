@@ -1,8 +1,13 @@
+html{
+  font-size: 16px;
+}
 body{
   margin:0;
+  font-size: 62.5%; /* 1em = 10px */
+  font-family: "Raleway", sans-serif;
 }
 a{
-  font: 13px/15px "Raleway", sans-serif;
+  font-size: 1.3em; /* 13px */
 }
 .center-block{
   left:0;
@@ -11,12 +16,12 @@ a{
   margin-right:auto;
 }
 h1{
-  font: 18px/20px "Raleway", sans-serif;
-  margin-top:0px;
-  margin-bottom:0px;
+  font-size: 1.8em; /* 18px */
+  margin-top:0;
+  margin-bottom:0;
 }
 h2{
-  font: 18px/20px "Raleway", sans-serif;
+  font-size: 1.8em; /* 18px */
   text-align:center;
 }
 /* NAVIGATION */
@@ -27,8 +32,8 @@ h2{
 }
 #navLogo{
   display:inline-block;
-  padding: 20px;
-  line-height:20px;
+  padding: 2em;
+  line-height:2em;
 }
 
 #navLinks{
@@ -41,14 +46,14 @@ h2{
   text-align:center;
 }
 #navLinks li a{
-  font: 14px/16px "Raleway", sans-serif;
+  font-size:1.4em;
   padding:10px;
   width:40px;
   text-decoration:none;
   color:black;
 }
 #navLinks li a:hover{
-  font: 14px/16px "Raleway Ultra-Bold", sans-serif;
+  font-family: "Raleway Ultra-Bold", sans-serif;
   cursor:hand;
   cursor:pointer;
   letter-spacing:.4px;
@@ -118,12 +123,23 @@ span.inactive{
   background-position:top left;
   background-repeat: no-repeat;
   border:1px solid #333;
+  opacity:1.0;
+}
+.project-image-container span {
+  display: none;
 }
 .project-image-container:hover{
-  opacity:50%;
+  opacity:0.5;
   cursor: pointer;
   cursor: hand;
-  content: "<div class='opacity-layer'></div>";
+}
+.project-image-container:hover span {
+  display:block;
+  color: blue;
+  text-align:center;
+  margin-top:30%;
+  font-size:8em;
+  opacity:1.0;
 }
 .opacity-layer{
   height:100%;

@@ -64,12 +64,14 @@ $(function(){
     // setTimeout(playIntroSequence, 2000);
   });
   
+  //smooth scroll to anchor
   $("#navLinks li a").click(function(e){
     e.preventDefault();
-    var scrollToId = $(e.currentTarget).attr("href");
+    var scrollToId = $(this).attr("href");
     $("html, body").animate({
       scrollTop: $(scrollToId).offset().top - 20
     }, 1000);
   });
+  
   
 });
