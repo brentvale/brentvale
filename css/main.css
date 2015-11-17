@@ -9,6 +9,9 @@ body{
 a{
   font-size: 1.3em; /* 13px */
 }
+strong{
+  font-weight: 700;
+}
 .center-block{
   left:0;
   right:0;
@@ -19,10 +22,15 @@ h1{
   font-size: 1.8em; /* 18px */
   margin-top:0;
   margin-bottom:0;
+  font-weight:400;
 }
 h2{
   font-size: 1.8em; /* 18px */
   text-align:center;
+  font-weight:400;
+}
+span.heavy-text{
+  font-weight: 700;
 }
 /* NAVIGATION */
 #navbar{

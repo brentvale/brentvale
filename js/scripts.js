@@ -72,6 +72,6 @@ $(function(){
       scrollTop: $(scrollToId).offset().top - 20
     }, 1000);
   });
-  
+
   
 });
