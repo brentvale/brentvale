@@ -20,11 +20,21 @@ strong{
   margin-right:auto;
   text-align:center;
 }
+.section-block{
+  margin-bottom:40px;
+  border-bottom: 1px dotted black;
+  padding-bottom:20px;
+}
 h1{
   font-size: 1.8em; /* 18px */
   margin-top:0;
   margin-bottom:0;
   font-weight:400;
+}
+@media screen and (max-width: 500px){
+  h1{
+    font-size: 1.4em;
+  }
 }
 h2{
   font-size: 1.8em; /* 18px */
@@ -66,6 +76,18 @@ span.heavy-text{
   text-decoration:none;
   color:black;
 }
+@media screen and (max-width: 500px){
+  #navLinks{
+    margin-right:10px;
+    width:180px;
+  }
+  #navLinks li a{
+    font-size: 1.1em;
+    width: 45px;
+    padding:15px 6px 0px 6px;
+    height:100%;
+  }
+}
 #navLinks li a:hover{
   font-family: "Raleway Ultra-Bold", sans-serif;
   cursor:hand;
@@ -93,6 +115,12 @@ span.active{
 }
 span.inactive{
   background-color:white;
+}
+/* CONNECT */
+#connect ~ div > p{
+  font-size: 1.4em;
+  max-width: 600px;
+  line-height:1.7em;
 }
 /* PROJECTS */
 iframe{
@@ -157,7 +185,7 @@ iframe{
 .project-image-container span {
   display: none;
 }
-.project-image-container:hover{
+/*.project-image-container:hover{
   opacity:0.5;
   cursor: pointer;
   cursor: hand;
@@ -175,7 +203,7 @@ iframe{
   width:100%;
   background-color:white;
   opacity:50%;
-}
+}*/
 .links{
   text-align:center;
 }
@@ -199,4 +227,29 @@ iframe{
 }
 #jupiterMoons{
   background-image: url(../images/jupiter_and_moons.jpg);
+}
+#indoorSoccer{
+  background-image: url(../images/u_of_c_soccer_indoor.png);
+  background-position:top center;
+}
+#projects, #hobbies {
+  margin-bottom:40px;
+}
+#connect{
+  margin-bottom:20px;
+}
+#linkedInLogo{
+  height:60px;
+  width:60px;
+  background-size:contain;
+  background-image: url(../images/linkedin_logo.png);
+}
+#linkedInLogo:hover{
+  background-image: url(../images/linkedin_logo_hover.png);
+  cursor:hand;
+  cursor:pointer;
+}
+#linkedInLogo > a {
+  height:100%;
+  width:100%;
 }

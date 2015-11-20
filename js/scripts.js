@@ -4,7 +4,7 @@ $(function(){
     LETTERING_INTERVAL: "",
     TITLE_INDEX: 0,
     BLINK_INTERVAL: "",
-    JOB_TITLE_CURRENT: "",
+    JOB_TITLE_CURRENT: "", //building the job title string, keeps track of position
     JOB_TITLE_SPAN: "<span class='active'></span>"
   };
   
@@ -69,7 +69,7 @@ $(function(){
     e.preventDefault();
     var scrollToId = $(this).attr("href");
     $("html, body").animate({
-      scrollTop: $(scrollToId).offset().top - 20
+      scrollTop: $(scrollToId).offset().top - 80
     }, 1000);
   });
   
