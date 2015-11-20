@@ -39,6 +39,10 @@ span.heavy-text{
   height:60px;
   width:100%;
   border-bottom:1px solid;
+  position:fixed;
+  top:0;
+  background-color:white;
+  z-index:1;
 }
 #navLogo{
   display:inline-block;
@@ -191,7 +195,7 @@ iframe{
   background-image: url(../images/ProAct_Facebook_App_for_web.jpg);
 }
 #neonatalResuscitation{
-  background-image: url(../images/neonatal_hr_acquisition.png);
+  background-image: url(../images/calaveras_creek_capital.png);
 }
 #jupiterMoons{
   background-image: url(../images/jupiter_and_moons.jpg);

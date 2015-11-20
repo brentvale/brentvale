@@ -1,7 +1,6 @@
 $(function(){
   var CONSTANTS = {
-    NAVBAR_HEIGHT: 60,
-    JOB_TITLE: "Fullstack Rails Engineer",
+    JOB_TITLE: "",
     LETTERING_INTERVAL: "",
     TITLE_INDEX: 0,
     BLINK_INTERVAL: "",
@@ -52,9 +51,10 @@ $(function(){
   
   $(document).ready(function(){
     var $jobTitle = $("#jobTitle");
+    CONSTANTS.JOB_TITLE = $jobTitle.html();
     var windowHeight = $(window).height();
-    $("#introDiv").css({height: (windowHeight-CONSTANTS.NAVBAR_HEIGHT)});
-    $jobTitle.css({paddingTop: (windowHeight/3)});
+    $("#introDiv").css({height: windowHeight});
+    $jobTitle.css({paddingTop: (windowHeight/2)});
     $jobTitle.html("");
     addCursor(blinkCursor);
     
