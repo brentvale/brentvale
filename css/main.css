@@ -153,6 +153,7 @@ iframe{
   display:inline-block;
   position:relative;
   vertical-align:top;
+  margin-bottom:30px;
 }
 .project-title{
   text-align:center;
