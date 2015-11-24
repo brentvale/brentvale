@@ -139,26 +139,20 @@ iframe{
 #projectsContainer{
   width:80%;
 }
-@media screen and (max-width: 769px){
-  .project-container{
-    width:99%;
-  }
-}
 @media screen and (min-width: 769px){
   .project-container{
     width:49%;
   }
 }
-@media screen and (min-width: 1200px){
+@media screen and (max-width: 768px){
   .project-container{
-    width:33%;
+    width:99%;
   }
 }
 .project-container{
   display:inline-block;
-  height:50em;
   position:relative;
-  vertical-align:top
+  vertical-align:top;
 }
 .project-title{
   text-align:center;
@@ -171,6 +165,11 @@ iframe{
   line-height:2.0em;
   text-align:center;
   width:90%;
+}
+@media screen and (min-width: 768px){
+  .project-description{
+    width:70%;
+  }
 }
 .project-image-container{
   width:250px;
