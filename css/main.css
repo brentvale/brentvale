@@ -103,6 +103,12 @@ span.heavy-text{
     margin-bottom:-1px;
 }
 /* MAIN INTRO */
+#introDiv{
+  height:500px;
+}
+#jobTitle{
+  margin-top:250px;
+}
 #jobTitle span{
   width: 8px;
   height: 20px;

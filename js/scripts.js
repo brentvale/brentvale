@@ -51,10 +51,11 @@ $(function(){
   
   $(document).ready(function(){
     var $jobTitle = $("#jobTitle");
+    var $introDiv = $("#introDiv");
     CONSTANTS.JOB_TITLE = $jobTitle.html();
     var windowHeight = $(window).height();
-    $("#introDiv").css({height: windowHeight});
-    $jobTitle.css({paddingTop: (windowHeight/2)});
+    $introDiv.css({height: windowHeight});
+    $jobTitle.css({paddingTop: (windowHeight/2), marginTop: 0});
     $jobTitle.html("");
     addCursor(blinkCursor);
     
