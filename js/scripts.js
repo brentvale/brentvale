@@ -58,7 +58,7 @@ $(function(){
     $jobTitle.css({paddingTop: (windowHeight/2), marginTop: 0});
     $jobTitle.html("");
     addCursor(blinkCursor);
-    
+
     playIntroSequence();
     //until ready for production, no timeout
     //$("body").css({overflow: "hidden"});
