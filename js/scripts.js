@@ -6,7 +6,8 @@ $(function(){
     BLINK_INTERVAL: "",
     JOB_TITLE_CURRENT: "", //building the job title string, keeps track of position
     JOB_TITLE_SPAN: "<span class='blinking'></span>"
-  };
+  }, $jobTitle = $("#jobTitle"),
+    $introDiv = $("#introDiv");
   
   var addNextCharacter = function(){
     var $jobTitle = $("#jobTitle");
@@ -32,6 +33,12 @@ $(function(){
     $("#timelapseYouTube").attr("src", "https://www.youtube.com/embed/PytYNkP4hpE");
     $("#beerbrewYouTube").attr("src", "https://www.youtube.com/embed/ff6grgUZ6C4");
   };
+  
+  var setWindow = function(){
+    var windowHeight = $(window).height();
+    $introDiv.css({height: windowHeight});
+    $jobTitle.css({paddingTop: (windowHeight/2), marginTop: 0});
+  }
 
   //smooth scroll to anchor
   $("#navLinks li a").click(function(e){
@@ -41,16 +48,14 @@ $(function(){
       scrollTop: $(scrollToId).offset().top - 80
     }, 1000);
   });
-
-  var $jobTitle = $("#jobTitle");
-  var $introDiv = $("#introDiv");
-  CONSTANTS.JOB_TITLE = $jobTitle.html();
   
-  var windowHeight = $(window).height();
-  $introDiv.css({height: windowHeight});
-  $jobTitle.css({paddingTop: (windowHeight/2), marginTop: 0});
-
+  $(window).resize(function(){
+    setWindow();
+  });
+  
+  CONSTANTS.JOB_TITLE = $jobTitle.html();
   setTimeout(function() {
+      setWindow();
       $jobTitle.html(CONSTANTS.JOB_TITLE_SPAN);
       playIntroSequence();
   }, 100);
