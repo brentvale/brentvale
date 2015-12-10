@@ -18,53 +18,15 @@ $(function(){
       CONSTANTS.TITLE_INDEX += 1;
     } else {
       clearInterval(CONSTANTS.LETTERING_INTERVAL);
-      blinkCursor();
-      
-      //$("body").css({overflow: "scroll"});
     }
   };
   
-  var playIntroSequence = function(){
-    clearInterval(CONSTANTS.BLINK_INTERVAL);    
+  var playIntroSequence = function(){   
     CONSTANTS.LETTERING_INTERVAL = setInterval(function(){
       addNextCharacter();
     }, 60);
   };
-  
-  var blinkCursor = function(){
-    CONSTANTS.BLINK_INTERVAL = setInterval(function(){
-      var $jobTitleSpan = $("#jobTitle span");
-      if($jobTitleSpan.hasClass("active")){
-        $jobTitleSpan.removeClass("active");
-        $jobTitleSpan.addClass("inactive");
-      } else {
-        $jobTitleSpan.removeClass("inactive");
-        $jobTitleSpan.addClass("active");
-      }
-    }, 400);
-  };
-  
-  var addCursor = function(callback){
-    $("#jobTitle").append(CONSTANTS.JOB_TITLE_SPAN);
-    callback();
-  };
-  
-  $(document).ready(function(){
-    var $jobTitle = $("#jobTitle");
-    var $introDiv = $("#introDiv");
-    CONSTANTS.JOB_TITLE = $jobTitle.html();
-    var windowHeight = $(window).height();
-    $introDiv.css({height: windowHeight});
-    $jobTitle.css({paddingTop: (windowHeight/2), marginTop: 0});
-    $jobTitle.html("");
-    addCursor(blinkCursor);
 
-    playIntroSequence();
-    //until ready for production, no timeout
-    //$("body").css({overflow: "hidden"});
-    // setTimeout(playIntroSequence, 2000);
-  });
-  
   //smooth scroll to anchor
   $("#navLinks li a").click(function(e){
     e.preventDefault();
@@ -73,5 +35,21 @@ $(function(){
       scrollTop: $(scrollToId).offset().top - 80
     }, 1000);
   });
+
+  var $jobTitle = $("#jobTitle");
+  var $introDiv = $("#introDiv");
+  CONSTANTS.JOB_TITLE = $jobTitle.html();
+  
+  var windowHeight = $(window).height();
+  $introDiv.css({height: windowHeight});
+  $jobTitle.css({paddingTop: (windowHeight/2), marginTop: 0});
+  $jobTitle.html("");
+  $jobTitle.append(CONSTANTS.JOB_TITLE_SPAN);
+
+  playIntroSequence();
+  
+  //until ready for production, no timeout
+  //$("body").css({overflow: "hidden"});
+  // setTimeout(playIntroSequence, 2000);
   
 });
