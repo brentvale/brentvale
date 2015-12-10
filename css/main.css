@@ -263,5 +263,8 @@ iframe{
 }
 @keyframes blinker{
   0% {background-color: white;}
-  100% {background-color: black;}
+  50% {background-color: black;}
+}
+span.blinking{
+  animation: blinker 1.0s infinite;
 }
