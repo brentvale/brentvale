@@ -262,9 +262,12 @@ iframe{
   width:100%;
 }
 @keyframes blinker{
-  0% {background-color: white;}
-  50% {background-color: black;}
+  0% {opacity: 1.0;}
+  55% {opacity: 1.0;}
+  56% {opacity: 0.0;}
+  100% {opacity: 0.0;}
 }
 span.blinking{
+  background-color: black;
   animation: blinker 1.0s infinite;
 }
