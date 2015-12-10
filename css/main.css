@@ -41,11 +41,6 @@ h2{
   text-align:center;
   font-weight:400;
 }
-@media only screen and (max-width: 1000px){
-  h2{
-    font-size: 2.4em;
-  }
-}
 span.heavy-text{
   font-weight: 700;
 }
@@ -275,4 +270,12 @@ iframe{
 span.blinking{
   background-color: black;
   animation: blinker 1.0s infinite;
+}
+@media (-webkit-min-device-pixel-ratio: 2){ 
+  h2 {
+    font-size: 2.4em;
+  }
+  #navbar{
+    height:60px;
+  }
 }
