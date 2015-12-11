@@ -24,6 +24,7 @@ strong{
   margin-bottom:40px;
   border-bottom: 1px dotted black;
   padding-bottom:20px;
+  width: 80%;
 }
 h1{
   font-size: 1.8em; /* 18px */
@@ -76,18 +77,6 @@ span.heavy-text{
   text-decoration:none;
   color:black;
 }
-@media only screen and (max-width: 500px){
-  #navLinks{
-    margin-right:10px;
-    width:180px;
-  }
-  #navLinks li a{
-    font-size: 1.1em;
-    width: 45px;
-    padding:15px 6px 0px 6px;
-    height:100%;
-  }
-}
 #navLinks li a:hover{
   font-family: "Raleway Ultra-Bold", sans-serif;
   cursor:hand;
@@ -116,18 +105,6 @@ span.heavy-text{
   margin-left:2px;
   position:absolute;
 }
-span.active{
-  background-color:black;
-}
-span.inactive{
-  background-color:white;
-}
-/* CONNECT */
-#connect ~ div > p{
-  font-size: 1.4em;
-  max-width: 600px;
-  line-height:1.7em;
-}
 /* PROJECTS */
 iframe{
 	top:0;
@@ -142,24 +119,20 @@ iframe{
 .link-text:hover{
   text-decoration:underline;
 }
-#projectsContainer{
-  width:80%;
-}
-@media only screen and (min-width: 1100px){
-  .project-container{
-    width:49%;
-  }
-}
-@media only screen and (max-width: 1099px){
-  .project-container{
-    width:99%;
-  }
-}
 .project-container{
   display:inline-block;
   position:relative;
   vertical-align:top;
-  margin-bottom:30px;
+  padding: 4%;
+  width: 40%;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 799px){
+  .project-container{
+    width:99%;
+    padding:0;
+    margin-bottom: 60px;
+  }
 }
 .project-title{
   text-align:center;
@@ -172,11 +145,6 @@ iframe{
   line-height:2.0em;
   text-align:center;
   width:90%;
-}
-@media only screen and (min-width: 768px){
-  .project-description{
-    width:70%;
-  }
 }
 .project-image-container{
   width:250px;
@@ -191,25 +159,6 @@ iframe{
 .project-image-container span {
   display: none;
 }
-/*.project-image-container:hover{
-  opacity:0.5;
-  cursor: pointer;
-  cursor: hand;
-}
-.project-image-container:hover span {
-  display:block;
-  color: blue;
-  text-align:center;
-  margin-top:30%;
-  font-size:8em;
-  opacity:1.0;
-}
-.opacity-layer{
-  height:100%;
-  width:100%;
-  background-color:white;
-  opacity:50%;
-}*/
 .links{
   text-align:center;
 }
@@ -271,11 +220,43 @@ span.blinking{
   background-color: black;
   animation: blinker 1.0s infinite;
 }
-@media (-webkit-min-device-pixel-ratio: 2){ 
+@media (-webkit-min-device-pixel-ratio: 1.5){ 
   h2 {
-    font-size: 2.4em;
+    font-size: 4.0em;
+  }
+  h1{
+    font-size: 3.0em;
+    line-height:3.0em;
   }
   #navbar{
-    height:60px;
+    height:120px;
+  }
+  #navLinks{
+    margin-right:10px;
+    width:400px;
+  }
+  #navLinks li a{
+    line-height:3.0em;
+    font-size: 2.0em;
+    width: 100px;
+    padding:15px 6px 0px 6px;
+    height:100%;
+  }
+  #jobTitle span{
+    height: 50px;
+    width: 20px;
+  }
+  #linkedInLogo{
+    height:100px;
+    width:100px;
+  }
+  a{
+    font-size: 3.6em; /* 13px */
+  }
+  .project-description{
+    font-size:3.0em;
+  }
+  .project-title{
+    font-size:3.2em;
   }
 }
