@@ -94,9 +94,11 @@ span.heavy-text{
 /* MAIN INTRO */
 #introDiv{
   height:500px;
+  background-image: url(../images/main_background.jpg);
+  background-position: center center;
 }
-#jobTitle{
-  margin-top:250px;
+#jobTitle {
+	margin-top: 0;
 }
 #jobTitle span{
   width: 8px;
