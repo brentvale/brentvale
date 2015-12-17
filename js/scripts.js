@@ -17,8 +17,13 @@ $(function(){
       CONSTANTS.TITLE_INDEX += 1;
     } else {
       clearInterval(CONSTANTS.LETTERING_INTERVAL);
+      setTimeout(removeBlinker, 5000);
       loadYouTubeVideos();
     }
+  };
+  
+  var removeBlinker = function(){
+    $(".blinking").remove();
   };
   
   var playIntroSequence = function(){   
@@ -37,7 +42,7 @@ $(function(){
   var setWindow = function(){
     var windowHeight = $(window).height();
     $introDiv.css({height: windowHeight});
-    $jobTitle.css({paddingTop: (windowHeight/2), marginTop: 0});
+    $jobTitle.css({paddingTop: (windowHeight/2 + 70), marginTop: 0});
   }
 
   //smooth scroll to anchor

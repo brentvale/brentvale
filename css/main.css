@@ -99,6 +99,7 @@ span.heavy-text{
 }
 #jobTitle {
 	margin-top: 0;
+  color: white;
 }
 #jobTitle span{
   width: 8px;
@@ -106,6 +107,61 @@ span.heavy-text{
   display:inline-block;
   margin-left:2px;
   position:absolute;
+  color: white;
+}
+#github{
+  background-position: 0 0;
+}
+#github:hover{
+  background-position: -60px 0;
+}
+#twitter{
+  background-position: -120px 0;
+}
+#twitter:hover{
+  background-position: -180px 0;
+}
+#linkedIn{
+  background-position: 0 -60px;
+}
+#linkedIn:hover{
+  background-position: -60px -60px;
+}
+#instaGram{
+  background-position: -120px -60px;
+  border-radius: 15px;
+}
+#instaGram:hover{
+  background-position: -180px -60px;
+  border: 1px solid black;
+}
+#youTube{
+  background-position: 0 -120px;
+}
+#youTube:hover{
+  background-position: -60px -120px;
+}
+.icons-container{
+  width: 80%;
+  background-color: black;
+}
+.icons-container div{
+  display: inline-block;
+  width: 19%;
+}
+.icons-container div a{
+  margin-top: 50px;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  background-color: black;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-image: url(../images/site_logos.png);
+  background-size: 400%;
+}
+.icons-container a:hover {
+  border: 1px solid white;
 }
 /* PROJECTS */
 iframe{
@@ -219,7 +275,7 @@ iframe{
   100% {opacity: 0.0;}
 }
 span.blinking{
-  background-color: black;
+  background-color: white;
   animation: blinker 1.0s infinite;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5){ 
