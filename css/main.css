@@ -96,6 +96,8 @@ span.heavy-text{
   height:500px;
   background-image: url(../images/main_background.jpg);
   background-position: center center;
+  background-size: cover;
+  background-repeat:no-repeat;
 }
 #jobTitle {
 	margin-top: 0;
@@ -321,5 +323,8 @@ span.blinking{
     width:99%;
     padding:0;
     margin-bottom: 60px;
+  }
+  #introDiv{
+    
   }
 }
