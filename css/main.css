@@ -93,7 +93,7 @@ span.heavy-text{
 }
 /* MAIN INTRO */
 #introDiv{
-  height:500px;
+  min-height:700px;
   background-image: url(../images/main_background.jpg);
   background-position: center center;
   background-size: cover;
