@@ -92,11 +92,15 @@ span.heavy-text{
     margin-bottom:-1px;
 }
 /* MAIN INTRO */
+#beforeIntroDiv{
+  height:50px;
+}
 #introDiv{
-  min-height:700px;
   background-image: url(../images/main_background.jpg);
-  background-position: center center;
-  background-size: cover;
+  min-height:400px;
+  background-size: contain;
+  width:100%;
+  background-position: top center;
   background-repeat:no-repeat;
 }
 #jobTitle {

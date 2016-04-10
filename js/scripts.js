@@ -40,9 +40,9 @@ $(function(){
   };
   
   var setWindow = function(){
-    var windowHeight = $(window).height();
-    $introDiv.css({height: windowHeight});
-    $jobTitle.css({paddingTop: (windowHeight/2 + 150), marginTop: 0});
+    // var windowHeight = $(window).height();
+//     $introDiv.css({height: windowHeight});
+    // $jobTitle.css({paddingTop: (windowHeight/2 + 150), marginTop: 0});
   }
 
   //smooth scroll to anchor
@@ -64,5 +64,16 @@ $(function(){
       $jobTitle.html(CONSTANTS.JOB_TITLE_SPAN);
       playIntroSequence();
   }, 100);
+
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+  
+  var canvas = document.getElementById('introDiv'); 
+
+  var c = canvas.getContext('2d');
+  var starClusters = new Stars({context: c, height: windowHeight, width: windowWidth});
+  
+  starClusters.tick();
+
 
 });
