@@ -96,7 +96,7 @@ span.heavy-text{
   height:50px;
 }
 #introDiv{
-  background-image: url(../images/main_background.jpg);
+/*  background-image: url(../images/main_background.jpg);*/
   min-height:400px;
   background-size: contain;
   width:100%;
@@ -327,8 +327,5 @@ span.blinking{
     width:99%;
     padding:0;
     margin-bottom: 60px;
-  }
-  #introDiv{
-    
   }
 }

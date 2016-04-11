@@ -69,11 +69,10 @@ $(function(){
   var windowHeight = $(window).height();
   
   var canvas = document.getElementById('introDiv'); 
+  canvas.height = windowHeight;
+  canvas.width = windowWidth;
 
   var c = canvas.getContext('2d');
   var starClusters = new Stars({context: c, height: windowHeight, width: windowWidth});
-  
-  starClusters.tick();
-
 
 });
