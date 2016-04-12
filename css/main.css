@@ -95,13 +95,20 @@ span.heavy-text{
 #beforeIntroDiv{
   height:50px;
 }
-#introDiv{
+#headingDiv{
+  position:absolute;
+  top: -500;
+  left: 0;
+  width: 100%;
+}
+canvas#introDiv{
 /*  background-image: url(../images/main_background.jpg);*/
   min-height:400px;
   background-size: contain;
   width:100%;
   background-position: top center;
   background-repeat:no-repeat;
+  display:inline;
 }
 #jobTitle {
 	margin-top: 0;
