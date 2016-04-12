@@ -1,338 +1,81 @@
 html{
   font-size: 16px;
+  height:100%;
 }
 body{
+  font-size: 62.5%;
   margin:0;
-  font-size: 62.5%; /* 1em = 10px */
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 0.05em;
+  height:100%;
 }
-a{
-  font-size: 1.3em; /* 13px */
+section.intro {
+  background: url("../images/chico_basin_brent_corral.jpg");
+  background-position:top center;
+  background-size: 100% 200%;
+  max-height:100%;
+  max-width:100%;
 }
-strong{
-  font-weight: 700;
+section.intro:hover {
+  background-position: bottom center;
 }
-.center-block{
-  left:0;
-  right:0;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-}
-.section-block{
-  margin-bottom:40px;
-  border-bottom: 1px dotted black;
-  padding-bottom:20px;
-  width: 80%;
-}
-h1{
-  font-size: 1.8em; /* 18px */
-  margin-top:0;
-  margin-bottom:0;
-  font-weight:400;
-}
-@media only screen and (max-width: 500px){
-  h1{
-    font-size: 1.4em;
-  }
-}
-h2{
-  font-size: 1.8em; /* 18px */
-  text-align:center;
-  font-weight:400;
-}
-span.heavy-text{
-  font-weight: 700;
-}
-/* NAVIGATION */
-#navbar{
-  height:60px;
-  width:100%;
-  border-bottom:1px solid;
-  position:fixed;
-  top:0;
-  background-color:white;
-  z-index:1;
-}
-#navLogo{
-  display:inline-block;
-  padding: 2em;
-  line-height:2em;
+div.intro__title{
+  padding: 20% 0% 0% 55%;
+  font-family: 'Rye', cursive;
+  font-size: 2em;
 }
 
-#navLinks{
-  list-style-type: none;
-  float:right;
-  margin-right:30px;
-}
-#navLinks li, a{
-  display:inline-block;
-  text-align:center;
-}
-#navLinks li a{
-  font-size:1.4em;
-  padding:10px;
-  width:50px;
-  text-decoration:none;
-  color:black;
-}
-#navLinks li a:hover{
-  font-family: "Raleway Ultra-Bold", sans-serif;
-  cursor:hand;
-  cursor:pointer;
-  letter-spacing:0.05em;
-}
-#navLinks li::after{
-    display:block;
-    height:1px;
-    color:transparent;
-    overflow:hidden;
-    visibility:hidden;
-    margin-bottom:-1px;
-}
-/* MAIN INTRO */
-#beforeIntroDiv{
-  height:50px;
-}
-#headingDiv{
-  position:absolute;
-  top: -500;
-  left: 0;
-  width: 100%;
-}
-canvas#introDiv{
-/*  background-image: url(../images/main_background.jpg);*/
-  min-height:400px;
-  background-size: contain;
-  width:100%;
-  background-position: top center;
-  background-repeat:no-repeat;
-  display:inline;
-}
-#jobTitle {
-	margin-top: 0;
-  color: white;
-}
-#jobTitle span{
-  width: 8px;
-  height: 20px;
-  display:inline-block;
-  margin-left:2px;
-  position:absolute;
-  color: white;
-}
-#github{
-  background-position: 0 0;
-}
-#github:hover{
-  background-position: -60px 0;
-}
-#twitter{
-  background-position: -120px 0;
-}
-#twitter:hover{
-  background-position: -180px 0;
-}
-#linkedIn{
-  background-position: 0 -60px;
-}
-#linkedIn:hover{
-  background-position: -60px -60px;
-}
-#instaGram{
-  background-position: -120px -60px;
-  border-radius: 15px;
-}
-#instaGram:hover{
-  background-position: -180px -60px;
-  border: 1px solid black;
-}
-#youTube{
-  background-position: 0 -120px;
-}
-#youTube:hover{
-  background-position: -60px -120px;
-}
-.icons-container{
-  width: 80%;
-  background-color: black;
-}
-.icons-container div{
-  display: inline-block;
-  width: 19%;
-}
-.icons-container div a{
-  margin-top: 50px;
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  background-color: black;
-  border-radius: 5px;
-  border: 1px solid black;
-  background-image: url(../images/site_logos.png);
-  background-size: 400%;
-}
-.icons-container a:hover {
-  border: 1px solid white;
-}
-/* PROJECTS */
-iframe{
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-}
-.link-text{
-  font-size:1.0em;
-  text-decoration:none;
-}
-.link-text:hover{
-  text-decoration:underline;
-}
-.project-container{
-  display:inline-block;
-  position:relative;
-  vertical-align:top;
-  padding: 4%;
-  width: 40%;
-  margin-bottom: 0;
-}
-@media only screen and (max-width: 799px){
-  .project-container{
-    width:99%;
-    padding:0;
-    margin-bottom: 60px;
+/** MEDIA QUERIES **/
+@media screen and (min-width: 901px){
+  section.intro{
+    min-height:650px;
   }
 }
-.project-title{
-  text-align:center;
-  font-size:1.6em;
-  line-height:1.8em;
-  position:relative;
-}
-.project-description{
-  font-size:1.4em;
-  line-height:2.0em;
-  text-align:center;
-  width:90%;
-}
-.project-image-container{
-  width:250px;
-  height:250px;
-  background-size:cover;
-  border-radius: 5px;
-  background-position:top left;
-  background-repeat: no-repeat;
-  border:1px solid #333;
-  opacity:1.0;
-}
-.project-image-container span {
-  display: none;
-}
-.links{
-  text-align:center;
-}
-.links a{
-  text-decoration:none;
-}
-.links a:hover{
-  text-decoration:underline;
-}
-#flappyDragon{
-  background-image: url(../images/Flappy_Dragon_Screen_Shot.png);
-}
-#minesweeper{
-  background-image: url(../images/Minesweeper.png);
-}
-#proact{
-  background-image: url(../images/ProAct_Facebook_App_for_web.jpg);
-}
-#neonatalResuscitation{
-  background-image: url(../images/calaveras_creek_capital.png);
-}
-#jupiterMoons{
-  background-image: url(../images/jupiter_and_moons.jpg);
-}
-#indoorSoccer{
-  background-image: url(../images/u_of_c_soccer_indoor.png);
-  background-position:top center;
-}
-#projects, #hobbies {
-  margin-bottom:40px;
-}
-#connect{
-  margin-bottom:20px;
-}
-#linkedInLogo{
-  height:50px;
-  width:50px;
-  display:block;
-  background-image: url(../images/linkedin_sprite.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-#linkedInLogo:hover{
-  background-position: 0 -50px;
-  cursor:hand;
-  cursor:pointer;
-}
-#linkedInLogo > a {
-  height:100%;
-  width:100%;
-}
-@keyframes blinker{
-  0% {opacity: 1.0;}
-  55% {opacity: 1.0;}
-  56% {opacity: 0.0;}
-  100% {opacity: 0.0;}
-}
-span.blinking{
-  background-color: white;
-  animation: blinker 1.0s infinite;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5){ 
-  h2 {
-    font-size: 4.0em;
+@media screen and (min-width: 1100px){
+  section.intro{
+    min-height:750px;
   }
-  h1{
-    font-size: 3.0em;
-    line-height:3.0em;
+}
+@media screen and (max-width: 900px){
+  section.intro{
+    min-height:550px;
   }
-  #navbar{
-    height:120px;
+}
+@media screen and (max-width: 800px){
+  section.intro{
+    min-height:450px;
   }
-  #navLinks{
-    margin-right:10px;
-    width:400px;
+}
+@media screen and (max-width: 700px){
+  section.intro{
+    min-height:400px;
   }
-  #navLinks li a{
-    line-height:3.0em;
-    font-size: 2.0em;
-    width: 100px;
-    padding:15px 6px 0px 6px;
-    height:100%;
+}
+@media screen and (max-width: 600px){
+  section.intro{
+    min-height:350px;
   }
-  #jobTitle span{
-    height: 50px;
-    width: 20px;
+}
+@media screen and (max-width: 500px){
+  section.intro{
+    min-height:300px;
   }
-  #linkedInLogo{
-    height:100px;
-    width:100px;
+  div.intro__title{
+    font-size:1.5em;
   }
-  a{
-    font-size: 3.6em; /* 13px */
+}
+@media screen and (min-width: 1200px){
+  section.intro{
+    min-height:800px;
   }
-  .project-description{
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio){
+  section.intro{
+    background-image: url("../images/brent_colored_pool_lg.jpg");
+    -webkit-background-size: 800px 600px;
+    background-size: cover;
+  }
+  div.intro__title{
     font-size:3.0em;
-  }
-  .project-title{
-    font-size:3.2em;
-  }
-  .project-container{
-    width:99%;
-    padding:0;
-    margin-bottom: 60px;
+    padding: 20% 0% 0% 55%;
   }
 }
+
