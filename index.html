@@ -14,12 +14,21 @@
 <body>
   
   <section class="intro">
+    <img id="mainBackground" src="images/brent_bandw_pool_lg.jpg"></img>
     <div id="codingCowboy" class="intro__title">
       coding cowboy
     </div>
   </section>
   
   <div style="height:500px"></div>
+  
+  <script>
+   $("#mainBackground").hover(function(event){
+     $(event.currentTarget).attr("src", "images/brent_colored_pool_lg.jpg");
+   }, function(event){
+     $(event.currentTarget).attr("src", "images/brent_bandw_pool_lg.jpg");
+   })
+  </script>
   
 </body>
 </html>
