@@ -268,38 +268,28 @@ div.intro__quote{
 }
 /** MEDIA QUERIES **/
 @media screen and (min-width: 901px){
-/*  section.intro{
-    min-height:650px;
-  }*/
+
   div.intro__hoverable{
     height: 90%;
   }
 }
 @media screen and (min-width: 1100px){
-/*  section.intro{
-    min-height:750px;
-  }*/
+
 }
 @media screen and (max-width: 1000px){
-/*  section.intro{
-    min-height:750px;
-  }*/
+
   #home{
     min-height:550px;
   }
 }
 @media screen and (max-width: 900px){
- /* section.intro{
-    min-height:550px;
-  }*/
+
    #home{
      min-height:500px;
    }
 }
 @media screen and (max-width: 800px){
- /* section.intro{
-    min-height:450px;
-  }*/
+
    div.intro__title img{
      height: 50px;
      width: 50px;
@@ -312,25 +302,69 @@ div.intro__quote{
    }
 }
 @media screen and (max-width: 700px){
- /* section.intro{
-    min-height:400px;
-  }*/
+
+ div.intro__title{
+   font-size:1.5em;
+ }
  #home{
    min-height:400px;
  }
 }
 @media screen and (max-width: 600px){
-  /*section.intro{
-    min-height:350px;
-  }*/
-    
+  .face {
+    height: 20px;
+    width: 20px;
+  }
+  #instagram .one,#github .one, #youTube .one, #linkedIn .one, #twitter .one{
+  -webkit-transform: rotateX(90deg) translateZ(10px);
+  }
+  
+  #instagram .two,#github .two, #youTube .two, #linkedIn .two, #twitter .two{
+    -webkit-transform: translateZ(10px);
+  }
+  
+  #instagram .three,#github .three, #youTube .three, #linkedIn .three, #twitter .three{
+    -webkit-transform: rotateY(90deg) translateZ(10px);
+  }
+  
+  #instagram .four,#github .four, #youTube .four, #linkedIn .four, #twitter .four{
+    -webkit-transform: rotateY(180deg) translateZ(10px);
+  }
+  
+  #instagram .five,#github .five, #youTube .five, #linkedIn .five, #twitter .five{
+    -webkit-transform: rotateY(-90deg) translateZ(10px);
+  }
+  
+  #instagram .six,#github .six, #youTube .six, #linkedIn .six, #twitter .six{
+    -webkit-transform: rotateX(-90deg) translateZ(10px) rotate(180deg);
+  }
+  #linkedIn {
+    top:10px;
+  }
+  #github {
+    top:50px;
+  }
+  #twitter {
+    top:90px;
+  }
+  #youTube {
+    top:130px;
+  }
+  #instagram {
+    top:170px;
+  }
+  .face {
+    height: 20px;
+    width:20px;
+  }
+  #linkedIn, #twitter, #github, #youTube, #instagram {
+    height: 20px;
+    width: 20px;
+  }
 }
 @media screen and (max-width: 500px){
- /* section.intro{
-    min-height:300px;
-  }*/
   div.intro__title{
-    font-size:1.5em;
+    font-size:1.0em;
   }
   div.intro__title img{
     height: 25px;
@@ -344,9 +378,7 @@ div.intro__quote{
   }
 }
 @media screen and (min-width: 1200px){
-  /*section.intro{
-    min-height:800px;
-  }*/
+
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio){
   div.intro__title{
