@@ -60,8 +60,6 @@ Stars.prototype = {
         
         this.stars[i].y = (this.stars[i].velocity.y/10) + this.height/2;
         this.stars[i].opacity = 0;
-        
-        
       }
     }
   },
@@ -106,7 +104,6 @@ Stars.prototype = {
       if(i < 88){
         velocities.push(new Velocity({x: i,y:i-100}));
       }
-      
     }
     return velocities;
   }

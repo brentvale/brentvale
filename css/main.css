@@ -5,49 +5,325 @@ html{
 body{
   font-size: 62.5%;
   margin:0;
+  font-family: 'Rye', cursive;
+  position:relative;
 }
+/* 3d CUBE*/
+#experiment {
+  -webkit-perspective: 500px;
+  -webkit-perspective-origin: 50% 200px;
+  z-index: 100;
+  position:fixed;
+  top:10px;
+  right: 15px;
+}
+.face {
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  padding: 1px;
+  background: url("../images/all_logos_crates_web.png");
+  background-size:400%;
+}
+#linkedIn, #twitter, #github, #youTube, #instagram {
+  position: fixed;
+  right: 0px;
+  margin: 0 auto;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: -webkit-transform 2s linear;
+  -webkit-transform-style: preserve-3d;
+  cursor:pointer;
+  cursor:hand;
+}
+
+@keyframes spin {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(180deg); }
+}
+@keyframes unspin {
+	from { transform: rotateY(180deg); }
+	to { transform: rotateY(0); }
+}
+#instagram.spin, #linkedIn.spin, #twitter.spin, #github.spin, #youTube.spin {
+	animation: spin 0.2s linear;
+  -webkit-animation-fill-mode: forwards;
+}
+#instagram.unspin, #linkedIn.unspin, #twitter.unspin, #github.unspin, #youTube.unspin {
+	animation: unspin 0.2s linear;
+}
+
+#linkedIn {
+  top:10px;
+}
+#github {
+  top:70px;
+}
+#twitter {
+  top:130px;
+}
+#youTube {
+  top:190px;
+}
+#instagram {
+  top:250px;
+}
+/* bottom facing item*/
+#linkedIn .one  {
+  -webkit-transform: rotateX(90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/*front facing item*/
+#linkedIn .two {
+  -webkit-transform: translateZ(20px);
+ background-position: 100% 0;
+}
+/*right facing item*/
+#linkedIn .three {
+  -webkit-transform: rotateY(90deg) translateZ(20px);
+   background-position: 0 -33.33%;
+}
+/* back facing image*/
+#linkedIn .four {
+  -webkit-transform: rotateY(180deg) translateZ(20px);
+  background-position: 66.66% 0;
+}
+/* left facing item*/
+#linkedIn .five {
+  -webkit-transform: rotateY(-90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/* bottom facing image*/
+#linkedIn .six {
+  -webkit-transform: rotateX(-90deg) translateZ(20px) rotate(180deg);
+  background-position: 0 -33.33% ;
+}
+/* bottom facing item*/
+#github .one  {
+  -webkit-transform: rotateX(90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/*front facing item*/
+#github .two {
+  -webkit-transform: translateZ(20px);
+ background-position: 33.33% 66.66%;
+}
+/*right facing item*/
+#github .three {
+  -webkit-transform: rotateY(90deg) translateZ(20px);
+   background-position: 0 -33.33%;
+}
+/* back facing image*/
+#github .four {
+  -webkit-transform: rotateY(180deg) translateZ(20px);
+  background-position: 0 66.66%;
+}
+/* left facing item*/
+#github .five {
+  -webkit-transform: rotateY(-90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/* bottom facing image*/
+#github .six {
+  -webkit-transform: rotateX(-90deg) translateZ(20px) rotate(180deg);
+  background-position: 0 -33.33% ;
+}
+/* bottom facing item*/
+#twitter .one  {
+  -webkit-transform: rotateX(90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/*front facing item*/
+#twitter .two {
+  -webkit-transform: translateZ(20px);
+ background-position: 33.33% 33.33%;
+}
+/*right facing item*/
+#twitter .three {
+  -webkit-transform: rotateY(90deg) translateZ(20px);
+   background-position: 0 -33.33%;
+}
+/* back facing image*/
+#twitter .four {
+  -webkit-transform: rotateY(180deg) translateZ(20px);
+  background-position: 0 33.33%;
+}
+/* left facing item*/
+#twitter .five {
+  -webkit-transform: rotateY(-90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/* bottom facing image*/
+#twitter .six {
+  -webkit-transform: rotateX(-90deg) translateZ(20px) rotate(180deg);
+  background-position: 0 -33.33% ;
+}
+/* bottom facing item*/
+#youTube .one  {
+  -webkit-transform: rotateX(90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/*front facing item*/
+#youTube .two {
+  -webkit-transform: translateZ(20px);
+ background-position: 33.33% 0;
+}
+/*right facing item*/
+#youTube .three {
+  -webkit-transform: rotateY(90deg) translateZ(20px);
+   background-position: 0 -33.33%;
+}
+/* back facing image*/
+#youTube .four {
+  -webkit-transform: rotateY(180deg) translateZ(20px);
+  background-position: 0 0;
+}
+/* left facing item*/
+#youTube .five {
+  -webkit-transform: rotateY(-90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/* bottom facing image*/
+#youTube .six {
+  -webkit-transform: rotateX(-90deg) translateZ(20px) rotate(180deg);
+  background-position: 0 -33.33% ;
+}
+/* bottom facing item*/
+#instagram .one  {
+  -webkit-transform: rotateX(90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/*front facing item*/
+#instagram .two {
+  -webkit-transform: translateZ(20px);
+ background-position: 100% 33.33%;
+}
+/*right facing item*/
+#instagram .three {
+  -webkit-transform: rotateY(90deg) translateZ(20px);
+   background-position: 0 -33.33%;
+}
+/* back facing image*/
+#instagram .four {
+  -webkit-transform: rotateY(180deg) translateZ(20px);
+  background-position: 66.66% 33.33%;
+}
+/* left facing item*/
+#instagram .five {
+  -webkit-transform: rotateY(-90deg) translateZ(20px);
+  background-position: 0 -33.33%;
+}
+/* bottom facing image*/
+#instagram .six {
+  -webkit-transform: rotateX(-90deg) translateZ(20px) rotate(180deg);
+  background-position: 0 -33.33% ;
+}
+/*end 3d cube*/
 img{
   width:100%;
   z-index: -1;
+}
+section.intro{
+  margin-bottom:-5px;
 }
 div.intro__title{
   position:absolute;
   top: 0;
   padding: 20% 0% 0% 55%;
-  font-family: 'Rye', cursive;
   font-size: 2em;
+  height: 80px;
+}
+div.intro__title img{
+  height: 100px;
+  width: 100px;
+  display:inline;
+  vertical-align:middle;
+}
+div.intro__hoverable{
+  position:absolute;
+  top: 0;
+  left: 40%;
+  margin-top: 18%;
+  height: 50%;
+  width: 10%;
+  z-index:1;
+}
+div.intro__quote{
+  width: 50%;
+  padding: 1em 0 0 1em;
+  font-size: 2em;
+  font-family: 'Raleway';
+  text-align:left;
 }
 
+#home { 
+  background: url("../images/brent_saddle_big_paint_lg_web.jpg") no-repeat;
+  min-height:600px;
+  background-size:cover;
+}
+ 
+#about {
+  background: url("../images/brent_saddle_close_alpha.png") 50% 0 no-repeat;
+  min-height: 1600px;
+}
 /** MEDIA QUERIES **/
 @media screen and (min-width: 901px){
 /*  section.intro{
     min-height:650px;
   }*/
+  div.intro__hoverable{
+    height: 90%;
+  }
 }
 @media screen and (min-width: 1100px){
 /*  section.intro{
     min-height:750px;
   }*/
 }
+@media screen and (max-width: 1000px){
+/*  section.intro{
+    min-height:750px;
+  }*/
+  #home{
+    min-height:550px;
+  }
+}
 @media screen and (max-width: 900px){
  /* section.intro{
     min-height:550px;
   }*/
+   #home{
+     min-height:500px;
+   }
 }
 @media screen and (max-width: 800px){
  /* section.intro{
     min-height:450px;
   }*/
+   div.intro__title img{
+     height: 50px;
+     width: 50px;
+   }
+   div.intro__quote{   
+     font-size: 1.5em;
+   }
+   #home{
+     min-height:425px;
+   }
 }
 @media screen and (max-width: 700px){
  /* section.intro{
     min-height:400px;
   }*/
+ #home{
+   min-height:400px;
+ }
 }
 @media screen and (max-width: 600px){
   /*section.intro{
     min-height:350px;
   }*/
+    
 }
 @media screen and (max-width: 500px){
  /* section.intro{
@@ -56,6 +332,16 @@ div.intro__title{
   div.intro__title{
     font-size:1.5em;
   }
+  div.intro__title img{
+    height: 25px;
+    width: 25px;
+  }
+  div.intro__quote{   
+    font-size: 1.0em;
+  }
+  #home{
+    min-height:230px;
+  }
 }
 @media screen and (min-width: 1200px){
   /*section.intro{
@@ -63,14 +349,13 @@ div.intro__title{
   }*/
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio){
-  section.intro{
-    background-image: url("../images/brent_colored_pool_lg.jpg");
-    -webkit-background-size: 800px 600px;
-    background-size: cover;
-  }
   div.intro__title{
     font-size:3.0em;
     padding: 20% 0% 0% 55%;
+  }
+  div.intro__title img{
+    height: 100px;
+    width: 100px;
   }
 }
 
