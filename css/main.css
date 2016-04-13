@@ -250,10 +250,12 @@ div.intro__hoverable{
 }
 div.intro__quote{
   width: 50%;
+  margin-left:auto;
+  margin-right:auto;
   padding: 1em 0 0 1em;
   font-size: 2em;
   font-family: 'Raleway';
-  text-align:left;
+  text-align:center;
 }
 
 #home { 
@@ -263,7 +265,7 @@ div.intro__quote{
 }
  
 #about {
-  background: url("../images/brent_saddle_close_alpha.png") 50% 0 no-repeat;
+  background: url("../images/brent_saddle_close_1800h.png") 50% 0 no-repeat;
   min-height: 1600px;
 }
 /** MEDIA QUERIES **/
