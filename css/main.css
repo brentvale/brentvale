@@ -311,6 +311,10 @@ div.intro__quote{
  }
 }
 @media screen and (max-width: 600px){
+  
+}
+/* AND */
+@media screen and (max-width: 600px), only screen (-webkit-max-device-pixel-ratio: 1.4), only screen and (max-device-pixel-ratio: 1.4){
   .face {
     height: 20px;
     width: 20px;
@@ -380,7 +384,7 @@ div.intro__quote{
 @media screen and (min-width: 1200px){
 
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio){
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){
   div.intro__title{
     font-size:3.0em;
     padding: 20% 0% 0% 55%;
@@ -395,7 +399,7 @@ div.intro__quote{
   }
   #about{
     min-height: 1400px;
-  } 
+  }
   
 }
 
