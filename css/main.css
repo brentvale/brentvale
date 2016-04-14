@@ -451,15 +451,12 @@ div.intro__quote{
     width: 80px;
   }
   #experiment {
-    
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 220px;
     z-index: 100;
     position:fixed;
     top:40px;
     right: 40px;
-  }
-  .experiment-load{
-    -webkit-perspective: 1000px;
-    -webkit-perspective-origin: 50% 220px;
   }
   div.intro__title{
     position:absolute;
