@@ -388,5 +388,9 @@ div.intro__quote{
     height: 100px;
     width: 100px;
   }
+  #experiment {
+    top:30px;
+    right: 30px;
+  }
 }
 
