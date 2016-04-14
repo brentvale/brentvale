@@ -14,8 +14,10 @@ $(function(){
    }, function(event){
      $background.attr("src", "images/brent_bandw_pool_lg.jpg");
    });
+   
    var $experiment = $('#experiment');
    $experiment.css({top: windowHeight});
+   $experiment.addClass('experiment-load');
    
    $('div[data-type="parallax-image"]').each(function(){
      var $parallaxImage = $(this); // assigning the object
