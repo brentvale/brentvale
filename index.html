@@ -106,26 +106,49 @@
     </div>
   </section><!-- intro -->
      
+  <section id="about" data-type="background" data-speed="10" class="pages">
+    <div class="intro__quote">
+      Courage is being scared to death and saddling up anyway.</br></br>
+      Courage is being scared to death and saddling up anyway.</br></br>
+      Courage is being scared to death and saddling up anyway.</br></br>
+      Courage is being scared to death and saddling up anyway.</br></br>
+      Courage is being scared to death and saddling up anyway.</br></br>
+      Courage is being scared to death and saddling up anyway.</br></br>
+      Courage is being scared to death and saddling up anyway.</br></br>
+      Courage is being scared to death and saddling up anyway.</br></br>
+      <span>-JOHN WAYNE</span>
+    </div>
+  </section>
   
+  <section id="home" data-type="background" data-speed="10" class="pages"> 
+  </section>
   
   <canvas id="homeCanvas"></canvas>
   
   <script>
-  var $background = $("#mainBackground");
-   $(".intro__hoverable").hover(function(event){
-     $background.attr("src", "images/brent_colored_pool_lg.jpg");
-   }, function(event){
-     $background.attr("src", "images/brent_bandw_pool_lg.jpg");
-   });
+  
    
    //change background image on mobile to be colored version
    $(function(){
-     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-       $background.attr("src", "images/brent_colored_pool_lg.jpg");
-       $('')
-     }
-
      var $window = $(window);
+     var windowWidth = $(window).width();
+     var windowHeight = $(window).height();
+  
+     var canvas = document.getElementById('homeCanvas'); 
+     canvas.height = windowHeight;
+     canvas.width = windowWidth;
+     
+     var $background = $("#mainBackground");
+      $(".intro__hoverable").hover(function(event){
+        $background.attr("src", "images/brent_colored_pool_lg.jpg");
+      }, function(event){
+        $background.attr("src", "images/brent_bandw_pool_lg.jpg");
+      });
+
+     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {    
+       $background.attr("src", "images/brent_colored_pool_lg_mobile_resize.jpg");
+       $background.addClass("fullscreen-mobile");
+     }
 
      $('section[data-type="background"]').each(function(){
        var $bgobj = $(this); // assigning the object
@@ -145,12 +168,6 @@
        $(this).removeClass('spin').addClass('unspin');
      });
      
-     var windowWidth = $(window).width();
-     var windowHeight = $(window).height();
-  
-     var canvas = document.getElementById('homeCanvas'); 
-     canvas.height = windowHeight;
-     canvas.width = windowWidth;
      var c = canvas.getContext('2d');
      var starClusters = new Stars({context: c, height: windowHeight, width: windowWidth});
    });

@@ -392,5 +392,9 @@ div.intro__quote{
     top:30px;
     right: 30px;
   }
+  #about{
+    min-height: 1400px;
+  } 
+  
 }
 
