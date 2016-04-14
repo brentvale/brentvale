@@ -14,36 +14,35 @@ $(function(){
    }, function(event){
      $background.attr("src", "images/brent_bandw_pool_lg.jpg");
    });
-   
    var $experiment = $('#experiment');
    $experiment.css({top: windowHeight});
    
-
+   $('div[data-type="parallax-image"]').each(function(){
+     var $parallaxImage = $(this); // assigning the object
+     $(window).scroll(function() {
+       windowTop = $window.scrollTop();
+       var movement = windowTop / $parallaxImage.data('speed');
+     
+       var experimentTop = parseInt($experiment.css("top"));
+       if(experimentTop >= 40){
+         $experiment.css({top: (experimentTop - (windowTop/20))});
+       } else {
+         $experiment.css({top: '10px'});
+       }
+     
+       var topDist = parseInt($parallaxImage.css("top"));
+       var newPaddingTop = -movement;
+       var parsedTop = newPaddingTop + "px";
+  
+       // change the padding top
+       $parallaxImage.css({ top: parsedTop });
+     });
+   });
+  //MOBILE
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {    
     $background.attr("src", "images/brent_colored_pool_lg_mobile_resize.jpg");
     $background.addClass("fullscreen-mobile");
   }
-  $('div[data-type="parallax-image"]').each(function(){
-    var $parallaxImage = $(this); // assigning the object
-    $(window).scroll(function() {
-      windowTop = $window.scrollTop();
-      var movement = windowTop / $parallaxImage.data('speed');
-      
-      var experimentTop = parseInt($experiment.css("top"));
-      if(experimentTop >= 40){
-        $experiment.css({top: (experimentTop - (windowTop/20))});
-      } else {
-        $experiment.css({top: '10px'});
-      }
-      
-      var topDist = parseInt($parallaxImage.css("top"));
-      var newPaddingTop = -movement;
-      var parsedTop = newPaddingTop + "px";
-   
-      // change the padding top
-      $parallaxImage.css({ top: parsedTop });
-    });
-  });
   //sections with background
   $('section[data-type="background"]').each(function(){
     var $bgobj = $(this); // assigning the object
