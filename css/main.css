@@ -8,6 +8,17 @@ body{
   font-family: 'Rye', cursive;
   position:relative;
 }
+.intro__lightning{
+  height: 200;
+  width:1600;
+  background: url("../images/lightning_sprite_3images_1strike.png");
+  background-size: 100% 800%;
+  /*14.28, 28.57, 42.85, 57.14, 71.43, 85.71 */
+  background-position: 0 85.71% ;
+  z-index: 10;
+  position: absolute;
+  top:750px;
+}
 
 /* 3d CUBE*/
 #experiment {
@@ -245,7 +256,7 @@ div.intro__hoverable{
   top: 0;
   left: 40%;
   margin-top: 18%;
-  height: 50%;
+  height: 300px;
   width: 10%;
   z-index:1;
 }
