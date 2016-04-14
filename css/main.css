@@ -314,7 +314,7 @@ div.intro__quote{
   
 }
 /* AND */
-@media screen and (max-width: 600px), only screen (-webkit-max-device-pixel-ratio: 1.4), only screen and (max-device-pixel-ratio: 1.4){
+@media screen and (max-width: 600px){
   .face {
     height: 20px;
     width: 20px;
@@ -400,6 +400,70 @@ div.intro__quote{
   #about{
     min-height: 1400px;
   }
+  .face {
+    height: 80px;
+    width: 80px;
+  }
+  #instagram .one,#github .one, #youTube .one, #linkedIn .one, #twitter .one{
+  -webkit-transform: rotateX(90deg) translateZ(40px);
+  }
   
+  #instagram .two,#github .two, #youTube .two, #linkedIn .two, #twitter .two{
+    -webkit-transform: translateZ(40px);
+  }
+  
+  #instagram .three,#github .three, #youTube .three, #linkedIn .three, #twitter .three{
+    -webkit-transform: rotateY(90deg) translateZ(40px);
+  }
+  
+  #instagram .four,#github .four, #youTube .four, #linkedIn .four, #twitter .four{
+    -webkit-transform: rotateY(180deg) translateZ(40px);
+  }
+  
+  #instagram .five,#github .five, #youTube .five, #linkedIn .five, #twitter .five{
+    -webkit-transform: rotateY(-90deg) translateZ(40px);
+  }
+  
+  #instagram .six,#github .six, #youTube .six, #linkedIn .six, #twitter .six{
+    -webkit-transform: rotateX(-90deg) translateZ(40px) rotate(180deg);
+  }
+  #linkedIn {
+    top:20px;
+  }
+  #github {
+    top:120px;
+  }
+  #twitter {
+    top:220px;
+  }
+  #youTube {
+    top:320px;
+  }
+  #instagram {
+    top:420px;
+  }
+  .face {
+    height: 80px;
+    width:80px;
+  }
+  #linkedIn, #twitter, #github, #youTube, #instagram {
+    height: 80px;
+    width: 80px;
+  }
+  #experiment {
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 220px;
+    z-index: 100;
+    position:fixed;
+    top:40px;
+    right: 40px;
+  }
+  div.intro__title{
+    position:absolute;
+    top: 0;
+    padding: 20% 0% 0% 50%;
+    font-size: 2em;
+    height: 80px;
+  }
 }
 
