@@ -271,9 +271,6 @@ div.intro__quote{
 /** MEDIA QUERIES **/
 @media screen and (min-width: 901px){
 
-  div.intro__hoverable{
-    height: 90%;
-  }
 }
 @media screen and (min-width: 1100px){
 
