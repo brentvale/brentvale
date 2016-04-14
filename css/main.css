@@ -11,7 +11,7 @@ body{
 /* 3d CUBE*/
 #experiment {
   -webkit-perspective: 500px;
-  -webkit-perspective-origin: 50% 200px;
+  -webkit-perspective-origin: 50% 150px;
   z-index: 100;
   position:fixed;
   top:10px;
