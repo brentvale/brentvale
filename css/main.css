@@ -279,6 +279,7 @@ div.intro__quote{
 #about {
   background: url("../images/brent_saddle_close_1800h.png") 50% 0 no-repeat;
   min-height: 1600px;
+  background-color:black;
 }
 /** MEDIA QUERIES **/
 @media screen and (min-width: 901px){

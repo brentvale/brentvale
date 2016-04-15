@@ -10,7 +10,7 @@ $(function(){
   
   var $background = $("#mainBackground");
    $(".intro__hoverable").hover(function(event){
-     $background.attr("src", "images/brent_colored_pool_lg.jpg");
+     $background.attr("src", "images/background_pool_brent_sky_bella_color.jpg");
    }, function(event){
      $background.attr("src", "images/background_pool_brent_sky_bella.jpg");
    });
