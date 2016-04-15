@@ -17,7 +17,7 @@ $(function(){
    
   //MOBILE
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {    
-    $background.attr("src", "images/brent_colored_pool_lg_mobile_resize.jpg");
+    $background.attr("src", "images/background_pool_brent_sky_bella_color.jpg");
     $background.addClass("fullscreen-mobile");
   } else {
     var $experiment = $('#experiment');
