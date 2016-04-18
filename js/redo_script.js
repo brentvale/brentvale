@@ -100,6 +100,6 @@ $(function(){
   };
   setInterval(lightningStrike, 5000);
   
-  
+  new HorseRide({windowWidth: windowWidth});
   //NEED TO HANDLE WINDOW RESIZING WITH LIGHTNING
 });

@@ -42,6 +42,11 @@ body{
 }
 #horseSprite{
   background-image:url("../images/horse_sprite_small_pasture_one_third.png");
+  height: 36px;
+  width: 50px;
+  background-position: 0 0;
+  position:absolute;
+  bottom:135px;
 }
 #homeCanvas{
   margin-bottom: -5px;
