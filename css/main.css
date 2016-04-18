@@ -505,9 +505,6 @@ div.intro__hoverable{
     top:30px;
     right: 30px;
   }
-  #about{
-    min-height: 1400px;
-  }
   .face {
     height: 80px;
     width: 80px;
@@ -572,6 +569,9 @@ div.intro__hoverable{
     padding: 20% 0% 0% 50%;
     font-size: 2em;
     height: 80px;
+  }
+  #about, #games {
+    margin-bottom: -2px;
   }
 }
 
