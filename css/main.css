@@ -46,7 +46,7 @@ body{
   width: 50px;
   background-position: 0 0;
   position:absolute;
-  bottom:135px;
+  bottom:177px;
 }
 #homeCanvas{
   margin-bottom: -5px;
@@ -54,7 +54,7 @@ body{
 #contact{
   background: url("../images/corn_field_black_sky.jpg");
   background-size: cover;
-  min-height: 300px;
+  height: 400px;
 }
 #games, #work {
   min-height:500px;
