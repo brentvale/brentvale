@@ -7,11 +7,21 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+  <!-- <nav>
+    <ul>
+      <a href="#intro"><li id="navOne"></li></a>
+      <a href="#about"><li id="navTwo"></li></a>
+      <a href="#games"><li id="navThree"></li></a>
+      <a href="#work"><li id="navFour"></li></a>
+      <a href="#contact"><li id="navFive"></li></a>
+      <li id="navHidden"></li>
+    </ul>
+  </nav> -->
   
   <div id="experiment">
     <a href="https://www.linkedin.com/in/brentvale" alt="Brent Taylor Vale LinkedIn Profile" target="_blank">
@@ -96,7 +106,7 @@
     </a>
   </div>
   
-  <section class="intro">
+  <section id="intro">
     <img id="mainBackground" src="images/background_pool_brent_sky_bella.jpg" alt="Brent Vale standing in flooded corral while horses watch."></img>
     <div class="intro__hoverable"></div>
     <div class="intro__title" data-type="parallax-image" data-speed="5">
@@ -105,29 +115,33 @@
       &nbsp;cowboy
     </div>
     <div class="intro__lightning"></div>
+    <div class="intro__summary center__block">
+      <p>I’m a Web Developer and (inherent) Designer that loves to write code.  I create games and web apps in ruby (on rails), css, node.js, javascript and the popular javascript frameworks - AngularJS, Backbone.js,&nbsp;and&nbsp;React.js.  
+      </p>
+      <p>
+      I’ve worked in start-ups with foci in financial services, risk analysis, gaming, healthcare, and identity management in roles from founder to Fullstack Rails Engineer.  I’ve seen successes and failures and learned how the best teams work together in lean and agile ways to win. I enjoy working with individuals to make the people and components of a project come together as a team with a successful&nbsp;outcome.  
+      </p>
+    </div>
   </section><!-- intro -->
      
-  <section id="about" data-type="background" data-speed="10">
-    <div class="intro__quote">
-      Courage is being scared to death and saddling up anyway.</br></br>
-      Courage is being scared to death and saddling up anyway.</br></br>
-      Courage is being scared to death and saddling up anyway.</br></br>
-      Courage is being scared to death and saddling up anyway.</br></br>
-      Courage is being scared to death and saddling up anyway.</br></br>
-      Courage is being scared to death and saddling up anyway.</br></br>
-      Courage is being scared to death and saddling up anyway.</br></br>
-      Courage is being scared to death and saddling up anyway.</br></br>
-      <span>-JOHN WAYNE</span>
-    </div>
+  <!-- <section id="about" data-type="background" data-speed="10">
+  </section>
+
+  <section id="home" data-type="background" data-speed="10">
+  </section>
+   -->
+  <section id="about"></section>
+  <section id="games"></section>
+  <section id="work"></section>
+  
+  <section id="contact">
+    <div id="horseSprite"></div>
   </section>
   
-  <section id="home" data-type="background" data-speed="10"> 
-  </section>
-  
-  <canvas id="homeCanvas"></canvas>
+  <canvas id="homeCanvas" style="display:none"></canvas>
   
   <div style="display:none">
-    <img src="images/brent_colored_pool_lg.jpg" />
+    <img src="images/background_pool_brent_sky_bella_color.jpg" />
   </div>
   
    <script src="js/stars.js"></script>

@@ -1,5 +1,4 @@
 var TOTAL_STARS = 100;
-var COLORS = ["blue", "white"];
 var WINDOW_HEIGHT = 0;
 var WINDOW_WIDTH = 0;
 
@@ -30,15 +29,13 @@ Stars.prototype = {
   createAndLoadImage: function(){
     var img = new Image();
     img.src = "images/main_background.jpg";
+    img.height = 658;
+    img.width = 2000;
     STARS_BACKGROUND = img;
   },
   clearScreen: function(){
-    this.ctx.drawImage(STARS_BACKGROUND, 0, 0, this.width, this.height);
-    
-    // this.ctx.beginPath();
-//     this.ctx.rect(0, 0, this.width, this.height);
-//     this.ctx.fillStyle = "black";
-//     this.ctx.fill();
+    this.ctx.drawImage(STARS_BACKGROUND, 0, 0, STARS_BACKGROUND.width, STARS_BACKGROUND.height, 
+                                         0, 0, this.width, this.height);
   },
   tick: function(){
     var that = this;
@@ -77,14 +74,14 @@ Stars.prototype = {
     for(var i = 0; i < this.possibleVelocities.length; i ++){
       //size between one and two
       var randomSize = Math.floor(Math.random()*2 + 1);
-      var randomColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+      var color = "white";
       //velocities can be outward from origin point
       var selectedVelocity = this.possibleVelocities[i];
       var tempX = this.possibleVelocities[i].x + this.width/2;
       var tempY = (this.possibleVelocities[i].y)/10 + this.height/2;
       
       var radius = 1;
-      this.stars.push(new Star({size: randomSize, color: randomColor, velocity:selectedVelocity, x: tempX, y:tempY, radius: radius}));
+      this.stars.push(new Star({size: randomSize, color: color, velocity:selectedVelocity, x: tempX, y:tempY, radius: radius}));
     }
   },
   createVanishingPoint: function(){

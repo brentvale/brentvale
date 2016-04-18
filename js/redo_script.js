@@ -1,12 +1,13 @@
-//change background image on mobile to be colored version
+var MAIN_IMAGE_RATIO = 658/2000; //main_background.jpg image_width/image_height
 $(function(){
   var $window = $(window);
   var windowWidth = $(window).width();
   var windowHeight = $(window).height();
 
   var canvas = document.getElementById('homeCanvas'); 
-  canvas.height = windowHeight;
   canvas.width = windowWidth;
+  canvas.height = windowWidth * MAIN_IMAGE_RATIO;
+
   
   var $background = $("#mainBackground");
    $(".intro__hoverable").hover(function(event){
@@ -14,7 +15,14 @@ $(function(){
    }, function(event){
      $background.attr("src", "images/background_pool_brent_sky_bella.jpg");
    });
+  
+  //manually place summary text a % of the way down the screen
    
+   //NEED TO REPLACE IF WINDOW RESIZED
+  var backgroundHeight = parseInt($background.css('height'));
+  var summaryTextTopPercent = 0.70;
+  $('.intro__summary').css({top: backgroundHeight*summaryTextTopPercent})
+  
   //MOBILE
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {    
     $background.attr("src", "images/background_pool_brent_sky_bella_color.jpg");
@@ -65,7 +73,7 @@ $(function(){
   });
   
   var c = canvas.getContext('2d');
-  var starClusters = new Stars({context: c, height: windowHeight, width: windowWidth});
+  var starClusters = new Stars({context: c, height: (windowWidth * MAIN_IMAGE_RATIO), width: windowWidth});
   
   //lightning bolt is 200x1600px, 8 fit on sprite
   //1  2      3      4      5      6      7
