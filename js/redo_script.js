@@ -65,40 +65,44 @@ $(function(){
     $(this).removeClass('spin').addClass('unspin');
   });
   
-  var c = canvas.getContext('2d');
-  var starClusters = new Stars({context: c, height: (windowWidth * MAIN_IMAGE_RATIO), width: windowWidth});
-  
-  //lightning bolt is 200x1600px, 8 fit on sprite
-  //1  2      3      4      5      6      7
-  //0, 14.28, 28.57, 42.85, 57.14, 71.43, 85.71
-  
-  $lightning = $('.intro__lightning');
-  // fraction to place lighting at correct point in image = 45/72
-  var lightTargetHeight = parseInt($('#mainBackground').css("height"))/72*45;
-  $lightning.css({width: windowWidth, height: windowWidth/8, top: (lightTargetHeight + "px")});
+  // var c = canvas.getContext('2d');
+//   var starClusters = new Stars({context: c, height: (windowWidth * MAIN_IMAGE_RATIO), width: windowWidth});
   
   
-  var lightningStrike = function(){
-    setTimeout(function(){$lightning.css({backgroundPosition: " 0 14.28%"})}, 50);
-    setTimeout(function(){$lightning.css({backgroundPosition: " 0 28.57%"})}, 100);
-    setTimeout(function(){$lightning.css({backgroundPosition: " 0 42.85%"})}, 150);
+  
+  window.onload = function(){
+    //lightning bolt is 200x1600px, 8 fit on sprite
+    //1  2      3      4      5      6      7
+    //0, 14.28, 28.57, 42.85, 57.14, 71.43, 85.71
+    $lightning = $('.intro__lightning');
+    // fraction to place lighting at correct point in image = 45/72
+    var lightTargetHeight = parseInt($('#mainBackground').css("height"))/72*45;
+    $lightning.css({width: windowWidth, height: windowWidth/8, top: (lightTargetHeight + "px")});
+  
+  
+    var lightningStrike = function(){
+      setTimeout(function(){$lightning.css({backgroundPosition: " 0 14.28%"})}, 50);
+      setTimeout(function(){$lightning.css({backgroundPosition: " 0 28.57%"})}, 100);
+      setTimeout(function(){$lightning.css({backgroundPosition: " 0 42.85%"})}, 150);
     
-    setTimeout(function(){$lightning.css({backgroundPosition: " 0 28.57%"})}, 200);
-    setTimeout(function(){$lightning.css({backgroundPosition: " 0 42.85%"})}, 250);
+      setTimeout(function(){$lightning.css({backgroundPosition: " 0 28.57%"})}, 200);
+      setTimeout(function(){$lightning.css({backgroundPosition: " 0 42.85%"})}, 250);
     
-    setTimeout(function(){$lightning.css({backgroundPosition: " 0 28.57%"})}, 300);
-    setTimeout(function(){$lightning.css({backgroundPosition: " 0 42.85%"})}, 350);
-    //reset lightning to blank position on sprite
-    setTimeout(function(){$lightning.css({backgroundPosition: " 0 42.85%"})}, 600);
-  };
-  setInterval(lightningStrike, 5000);
+      setTimeout(function(){$lightning.css({backgroundPosition: " 0 28.57%"})}, 300);
+      setTimeout(function(){$lightning.css({backgroundPosition: " 0 42.85%"})}, 350);
+      //reset lightning to blank position on sprite
+      setTimeout(function(){$lightning.css({backgroundPosition: " 0 42.85%"})}, 600);
+    };
+    setInterval(lightningStrike, 5000);
   
-  new HorseRide({windowWidth: windowWidth});
-  //NEED TO HANDLE WINDOW RESIZING WITH LIGHTNING
+    new HorseRide({windowWidth: windowWidth});
+    //NEED TO HANDLE WINDOW RESIZING WITH LIGHTNING
   
-  //manually place summary text a % of the way down the screen
-   //NEED TO REPLACE IF WINDOW RESIZED
-  var backgroundHeight = parseInt($background.css('height'));
-  var summaryTextTopPercent = 0.70;
-  $('.intro__summary').css({top: backgroundHeight*summaryTextTopPercent});
+    //manually place summary text a % of the way down the screen
+     //NEED TO REPLACE IF WINDOW RESIZED
+    var backgroundHeight = parseInt($background.css('height'));
+    var summaryTextTopPercent = 0.70;
+    $('.intro__summary').css({top: backgroundHeight*summaryTextTopPercent});
+  }
+  
 });
