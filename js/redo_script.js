@@ -16,13 +16,6 @@ $(function(){
      $background.attr("src", "images/background_pool_brent_sky_bella.jpg");
    });
   
-  //manually place summary text a % of the way down the screen
-   
-   //NEED TO REPLACE IF WINDOW RESIZED
-  var backgroundHeight = parseInt($background.css('height'));
-  var summaryTextTopPercent = 0.70;
-  $('.intro__summary').css({top: backgroundHeight*summaryTextTopPercent})
-  
   //MOBILE
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {    
     $background.attr("src", "images/background_pool_brent_sky_bella_color.jpg");
@@ -102,4 +95,10 @@ $(function(){
   
   new HorseRide({windowWidth: windowWidth});
   //NEED TO HANDLE WINDOW RESIZING WITH LIGHTNING
+  
+  //manually place summary text a % of the way down the screen
+   //NEED TO REPLACE IF WINDOW RESIZED
+  var backgroundHeight = parseInt($background.css('height'));
+  var summaryTextTopPercent = 0.70;
+  $('.intro__summary').css({top: backgroundHeight*summaryTextTopPercent});
 });
