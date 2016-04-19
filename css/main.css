@@ -27,7 +27,6 @@ body{
 }
 .intro__summary{
   position:absolute;
-  top:700px;
   color: white;
   width: 60%;
   font-size: 1.5em;
@@ -321,6 +320,10 @@ img{
 }
 section#intro{
   margin-bottom:-5px;
+  background-image: url("../images/background_pool_brent_sky_bella.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  min-height:600px;
 }
 div.intro__title{
   position:absolute;
@@ -364,16 +367,20 @@ div.intro__hoverable{
 
 }
 @media screen and (max-width: 1000px){
-
+  .intro__summary{
+    width: 50%;
+  }
   #home{
     min-height:550px;
   }
 }
 @media screen and (max-width: 900px){
-
-   #home{
-     min-height:500px;
-   }
+  .intro__summary{
+    width: 45%;
+  }
+  #home{
+   min-height:500px;
+  }
 }
 @media screen and (max-width: 800px){
 
@@ -389,7 +396,9 @@ div.intro__hoverable{
    }
 }
 @media screen and (max-width: 700px){
-
+  .intro__summary{
+    width: 60%;
+  }
  div.intro__title{
    font-size:1.5em;
  }
