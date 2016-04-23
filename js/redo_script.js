@@ -42,10 +42,10 @@ $(function(){
         var movement = windowTop / $parallaxImage.data('speed');
      
         var experimentTop = parseInt($experiment.css("top"));
-        if(experimentTop >= 40){
+        if(experimentTop >= 80){
           $experiment.css({top: (experimentTop - (windowTop/20))});
         } else {
-          $experiment.css({top: '10px'});
+          $experiment.css({top: '70px'});
         }
      
         var topDist = parseInt($parallaxImage.css("top"));
