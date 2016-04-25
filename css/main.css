@@ -8,6 +8,41 @@ body{
   font-family: 'Rye', cursive;
   position:relative;
 }
+
+/* INTRO */
+img{
+  width:100%;
+  z-index: -1;
+}
+section#intro{
+  margin-bottom:-5px;
+  background-image: url("../images/background_pool_brent_sky_bella.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  min-height:600px;
+}
+div.intro__title{
+  position:absolute;
+  top: 0;
+  padding: 20% 0% 0% 55%;
+  font-size: 2em;
+  height: 80px;
+}
+div.intro__title img{
+  height: 100px;
+  width: 100px;
+  display:inline;
+  vertical-align:middle;
+}
+div.intro__hoverable{
+  position:absolute;
+  top: 0;
+  left: 40%;
+  margin-top: 18%;
+  height: 300px;
+  width: 10%;
+  z-index:1;
+}
 .intro__lightning{
   height: 200;
   width:1600;
@@ -60,9 +95,15 @@ body{
   background-color:black;
 }
 
+/* GAMES */
+#games div:first-child{
+  text-align:center;
+}
 #games img{
   max-width: 500px;
 }
+
+/* NAV */
 nav {
   position: fixed;
   top: 0;
@@ -324,51 +365,7 @@ nav ul a{
   background-position: 0 -33.33% ;
 }
 /*end 3d cube*/
-img{
-  width:100%;
-  z-index: -1;
-}
-section#intro{
-  margin-bottom:-5px;
-  background-image: url("../images/background_pool_brent_sky_bella.jpg");
-  background-size:cover;
-  background-repeat:no-repeat;
-  min-height:600px;
-}
-div.intro__title{
-  position:absolute;
-  top: 0;
-  padding: 20% 0% 0% 55%;
-  font-size: 2em;
-  height: 80px;
-}
-div.intro__title img{
-  height: 100px;
-  width: 100px;
-  display:inline;
-  vertical-align:middle;
-}
-div.intro__hoverable{
-  position:absolute;
-  top: 0;
-  left: 40%;
-  margin-top: 18%;
-  height: 300px;
-  width: 10%;
-  z-index:1;
-}
 
-/*#home {
-  background: url("../images/brent_saddle_big_paint_lg_web.jpg") no-repeat;
-  min-height:600px;
-  background-size:cover;
-}
-
-#about {
-  background: url("../images/brent_saddle_close_1800h.png") 50% 0 no-repeat;
-  min-height: 1600px;
-  background-color:black;
-}*/
 /** MEDIA QUERIES **/
 @media screen and (min-width: 901px){
 
