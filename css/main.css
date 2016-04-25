@@ -59,6 +59,10 @@ body{
   min-height:500px;
   background-color:black;
 }
+
+#games img{
+  max-width: 500px;
+}
 nav {
   position: fixed;
   top: 0;
