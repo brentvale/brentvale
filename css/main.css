@@ -478,7 +478,7 @@ nav ul a{
  
 }
 @media screen and (max-width: 600px){
-  img#minesweeperGameImage{
+  img#minesweeperGameImage, img#battleshipGameImage{
     width:80%;
     padding-left:10%;
   }
@@ -654,6 +654,10 @@ nav ul a{
   }
   .intro-summary{
     width:80%;
+  }
+  img#minesweeperGameImage, img#battleshipGameImage{
+    width:80%;
+    padding-left:10%;
   }
 }
 
