@@ -102,22 +102,29 @@ div.intro__hoverable{
 #games div:first-child{
   text-align:center;
 }
-#games img{
+#gameHeadingImage{
   max-width: 500px;
   margin-bottom: 100px;
 }
 .game-block{
   width: 90%;
-  height:500px;
+  min-height:400px;
 }
 .game-section-block{
-  width: 50%;
+  width: 49%;
   display:inline-block;
 }
-#games img#flappyDragonHeading{
+.game-section-block img{
+  height:100%;
+}
+img#flappyDragonHeading, img#minesweeperHeading{
   height: 50%;
   width:50%;
   margin-bottom: 0px;
+}
+img#minesweeperGameImage{
+  width:75%;
+  padding-left:24%;
 }
 .game-description p{
   color:white;
@@ -129,6 +136,9 @@ div.intro__hoverable{
 }
 .game-description p.game-links{
   padding-left:20px;
+}
+#minesweeperDescription p a{
+  color:red;
 }
 /* NAV */
 nav {
@@ -467,6 +477,10 @@ nav ul a{
  
 }
 @media screen and (max-width: 600px){
+  img#minesweeperGameImage{
+    width:80%;
+    padding-left:10%;
+  }
   .game-section-block{
     width: 100%;
   }
