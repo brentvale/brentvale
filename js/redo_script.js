@@ -95,7 +95,7 @@ $(function(){
      //NEED TO REPLACE IF WINDOW RESIZED
     var backgroundHeight = parseInt($BACKGROUND.css('height'));
     var summaryTextTopPercent = 0.70;
-    $('.intro__summary').css({top: backgroundHeight*summaryTextTopPercent});
+    $('.intro-summary').css({top: backgroundHeight*summaryTextTopPercent});
   };
   
   window.onload = function(){

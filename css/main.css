@@ -54,13 +54,13 @@ div.intro__hoverable{
   position: absolute;
   top:750px;
 }
-.center__block{
+.center-block{
   left:0;
   right:0;
   margin-left:auto;
   margin-right:auto;
 }
-.intro__summary{
+.intro-summary{
   position:absolute;
   color: white;
   width: 60%;
@@ -73,6 +73,7 @@ div.intro__hoverable{
   background-color: rgba(0,0,0,0.3);
   padding:20px;
   border-radius:5px;
+  top:600px;
 }
 #horseSprite{
   background-image:url("../images/horse_sprite_small_pasture_one_third.png");
@@ -96,11 +97,26 @@ div.intro__hoverable{
 }
 
 /* GAMES */
+#games{
+  padding-top:0px;
+}
 #games div:first-child{
   text-align:center;
 }
 #games img{
   max-width: 500px;
+  margin-bottom: 100px;
+}
+.game-block{
+  width: 90%;
+  height:500px;
+}
+.half-block{
+  width: 50%;
+}
+#flappyDragonHeading{
+  height: 50%;
+  width:50%;
 }
 
 /* NAV */
@@ -374,37 +390,42 @@ nav ul a{
 
 }
 @media screen and (max-width: 1000px){
-  .intro__summary{
-    width: 50%;
+  .intro-summary{
+    width: 60%;
   }
   #home{
     min-height:550px;
   }
 }
 @media screen and (max-width: 900px){
-  .intro__summary{
-    width: 45%;
+  .intro-summary{
+    width: 70%;
   }
   #home{
    min-height:500px;
   }
+  #games{
+    padding-top:50px;
+  }
 }
 @media screen and (max-width: 800px){
-
-   div.intro__title img{
-     height: 50px;
-     width: 50px;
-   }
-   div.intro__quote{   
-     font-size: 1.5em;
-   }
-   #home{
-     min-height:425px;
-   }
+  .intro-summary{
+    width: 90%;
+  }
+  div.intro__title img{
+    height: 50px;
+    width: 50px;
+  }
+  div.intro__quote{   
+    font-size: 1.5em;
+  }
+  #home{
+    min-height:425px;
+  }
 }
 @media screen and (max-width: 700px){
-  .intro__summary{
-    width: 60%;
+  #games{
+    padding-top:150px;
   }
  div.intro__title{
    font-size:1.5em;
@@ -435,10 +456,9 @@ nav ul a{
  
 }
 @media screen and (max-width: 600px){
-  
-}
-/* AND */
-@media screen and (max-width: 600px){
+  #games{
+    padding-top:200px;
+  }
   .face {
     height: 20px;
     width: 20px;
@@ -491,6 +511,9 @@ nav ul a{
   }
 }
 @media screen and (max-width: 500px){
+  #games{
+    padding-top:300px;
+  }
   div.intro__title{
     font-size:1.0em;
   }
