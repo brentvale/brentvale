@@ -547,20 +547,21 @@ nav ul a{
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){
+  p {
+    font-size:3em;
+    text-align:center;
+    font-weight:100;
+  }
   .game-section-block{
     width: 100%;
   }
-  .game-description p.game-links{
-    padding-left:0px;
+  .game-description p{
     text-align:center;
-  }
-  div.intro__title{
-    font-size:3.0em;
-    padding: 20% 0% 0% 55%;
-  }
-  div.intro__title img{
-    height: 100px;
-    width: 100px;
+    width:90%;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
   }
   #experiment {
     top:30px;
@@ -624,14 +625,20 @@ nav ul a{
     position:absolute;
     top: 0;
     padding: 20% 0% 0% 50%;
-    font-size: 2em;
     height: 80px;
+  }
+  div.intro__title img{
+    height: 100px;
+    width: 100px;
+  }
+  #games{
+    padding-top:300px;
   }
   #about, #games {
     margin-bottom: -2px;
   }
   .intro-summary{
-    font-size:2em;
+    width:80%;
   }
 }
 
