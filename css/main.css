@@ -108,7 +108,8 @@ div.intro__hoverable{
 }
 .game-block{
   width: 90%;
-  min-height:400px;
+  min-height:200px;
+  padding-bottom:200px;
 }
 .game-section-block{
   width: 49%;
@@ -122,7 +123,7 @@ img#flappyDragonHeading, img#minesweeperHeading{
   width:50%;
   margin-bottom: 0px;
 }
-img#minesweeperGameImage, img#battleshipGameImage{
+img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage{
   width:75%;
   padding-left:24%;
 }
@@ -478,7 +479,7 @@ nav ul a{
  
 }
 @media screen and (max-width: 600px){
-  img#minesweeperGameImage, img#battleshipGameImage{
+  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage{
     width:80%;
     padding-left:10%;
   }
@@ -655,7 +656,7 @@ nav ul a{
   .intro-summary{
     width:80%;
   }
-  img#minesweeperGameImage, img#battleshipGameImage{
+  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage{
     width:80%;
     padding-left:10%;
   }
