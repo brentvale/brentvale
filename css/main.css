@@ -67,8 +67,8 @@ div.intro__hoverable{
   font-size: 1.5em;
   line-height:1.75em;
   font-family: 'Raleway', Arial;
-  text-align:center;
   letter-spacing:1.5px;
+  text-align:center;
   font-weight:100;
   background-color: rgba(0,0,0,0.3);
   padding:20px;
@@ -97,9 +97,6 @@ div.intro__hoverable{
 }
 
 /* GAMES */
-#games{
-  padding-top:0px;
-}
 #games div:first-child{
   text-align:center;
 }
@@ -528,9 +525,6 @@ nav ul a{
     min-height:230px;
   }
 }
-@media screen and (min-width: 1200px){
-
-}
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){
   div.intro__title{
     font-size:3.0em;
@@ -543,10 +537,6 @@ nav ul a{
   #experiment {
     top:30px;
     right: 30px;
-  }
-  .face {
-    height: 80px;
-    width: 80px;
   }
   #instagram .one,#github .one, #youTube .one, #linkedIn .one, #twitter .one{
   -webkit-transform: rotateX(90deg) translateZ(40px);
@@ -611,6 +601,9 @@ nav ul a{
   }
   #about, #games {
     margin-bottom: -2px;
+  }
+  #games{
+    padding-top: 200px;
   }
 }
 
