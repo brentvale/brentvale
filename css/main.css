@@ -602,8 +602,8 @@ nav ul a{
   #about, #games {
     margin-bottom: -2px;
   }
-  #games{
-    padding-top: 200px;
+  .intro-summary{
+    font-size:2em;
   }
 }
 

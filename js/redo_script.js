@@ -31,6 +31,7 @@ $(function(){
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {    
     $BACKGROUND.attr("src", "images/background_pool_brent_sky_bella_color.jpg");
     $BACKGROUND.addClass("fullscreen-mobile");
+    $("#games").css({paddingTop: "200px"});
   } else {
     var $experiment = $('#experiment');
     $experiment.css({top: WINDOW_HEIGHT});
