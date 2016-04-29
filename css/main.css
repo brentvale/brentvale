@@ -8,6 +8,14 @@ body{
   font-family: 'Rye', cursive;
   position:relative;
 }
+p {
+  font-family: 'Raleway', Arial;
+  letter-spacing:1.5px;
+  font-size:1.5em;
+  line-height:1.75em;
+  text-align:center;
+  font-weight:100;
+}
 
 /* INTRO */
 img{
@@ -64,12 +72,6 @@ div.intro__hoverable{
   position:absolute;
   color: white;
   width: 60%;
-  font-size: 1.5em;
-  line-height:1.75em;
-  font-family: 'Raleway', Arial;
-  letter-spacing:1.5px;
-  text-align:center;
-  font-weight:100;
   background-color: rgba(0,0,0,0.3);
   padding:20px;
   border-radius:5px;
@@ -108,14 +110,26 @@ div.intro__hoverable{
   width: 90%;
   height:500px;
 }
-.half-block{
+.game-section-block{
   width: 50%;
+  display:inline-block;
 }
-#flappyDragonHeading{
+#games img#flappyDragonHeading{
   height: 50%;
   width:50%;
+  margin-bottom: 0px;
 }
-
+.game-description p{
+  color:white;
+  text-align:left;
+}
+.game-description p a{
+  text-decoration:underline;
+  color: yellow;
+}
+.game-description p.game-links{
+  padding-left:20px;
+}
 /* NAV */
 nav {
   position: fixed;
@@ -453,6 +467,13 @@ nav ul a{
  
 }
 @media screen and (max-width: 600px){
+  .game-section-block{
+    width: 100%;
+  }
+  .game-description p.game-links{
+    padding-left:0px;
+    text-align:center;
+  }
   #games{
     padding-top:200px;
   }
@@ -526,6 +547,13 @@ nav ul a{
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){
+  .game-section-block{
+    width: 100%;
+  }
+  .game-description p.game-links{
+    padding-left:0px;
+    text-align:center;
+  }
   div.intro__title{
     font-size:3.0em;
     padding: 20% 0% 0% 55%;
