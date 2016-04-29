@@ -122,10 +122,11 @@ img#flappyDragonHeading, img#minesweeperHeading{
   width:50%;
   margin-bottom: 0px;
 }
-img#minesweeperGameImage{
+img#minesweeperGameImage, img#battleshipGameImage{
   width:75%;
   padding-left:24%;
 }
+
 .game-description p{
   color:white;
   text-align:left;
