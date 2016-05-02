@@ -20,44 +20,47 @@ $(function(){
   canvas.height = WINDOW_WIDTH * MAIN_IMAGE_RATIO;
 
   
-  $BACKGROUND = $("#intro");
-   $(".intro__hoverable").hover(function(event){
-     $BACKGROUND.attr("src", "images/background_pool_brent_sky_bella_color.jpg");
-   }, function(event){
-     $BACKGROUND.attr("src", "images/background_pool_brent_sky_bella.jpg");
-   });
+  var $intro = $("#intro");
+  //hovering over .intro__hoverable replaces background with color image
+  $('.intro__hoverable').hover(function(){
+    $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
+  }, function(){
+    $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella.jpg')"});
+  });
   
   //MOBILE
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {    
-    $BACKGROUND.attr("src", "images/background_pool_brent_sky_bella_color.jpg");
-    $BACKGROUND.addClass("fullscreen-mobile");
+    $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
+    $intro.addClass("fullscreen-mobile");
     $("#games").css({paddingTop: "550px"});
+
   } else {
-    var $experiment = $('#experiment');
-    $experiment.css({top: WINDOW_HEIGHT});
-   
-    $('div[data-type="parallax-image"]').each(function(){
-      var $parallaxImage = $(this); // assigning the object
-      $(window).scroll(function() {
-        windowTop = $WINDOW.scrollTop();
-        var movement = windowTop / $parallaxImage.data('speed');
-     
-        var experimentTop = parseInt($experiment.css("top"));
-        if(experimentTop >= 80){
-          $experiment.css({top: (experimentTop - (windowTop/20))});
-        } else {
-          $experiment.css({top: '70px'});
-        }
-     
-        var topDist = parseInt($parallaxImage.css("top"));
-        var newPaddingTop = -movement;
-        var parsedTop = newPaddingTop + "px";
-  
-        // change the padding top
-        $parallaxImage.css({ top: parsedTop });
-      });
-    });
+    
   }
+  var $experiment = $('#experiment');
+  $experiment.css({top: WINDOW_HEIGHT});
+  
+  $('div[data-type="parallax-image"]').each(function(){
+    var $parallaxImage = $(this); // assigning the object
+    $(window).scroll(function() {
+      windowTop = $WINDOW.scrollTop();
+      var movement = windowTop / $parallaxImage.data('speed');
+   
+      var experimentTop = parseInt($experiment.css("top"));
+      if(experimentTop >= 80){
+        $experiment.css({top: (experimentTop - (windowTop/20))});
+      } else {
+        $experiment.css({top: '70px'});
+      }
+   
+      var topDist = parseInt($parallaxImage.css("top"));
+      var newPaddingTop = -movement;
+      var parsedTop = newPaddingTop + "px";
+
+      // change the padding top
+      $parallaxImage.css({ top: parsedTop });
+    });
+  });
   //sections with background
   $('section[data-type="background"]').each(function(){
     var $bgobj = $(this); // assigning the object
@@ -70,12 +73,16 @@ $(function(){
     });
   });
   
+  //hovering over web presence icons 
   $('.crate').hover(function(){
     $(this).removeClass('unspin').addClass('spin');
   },
   function(){
     $(this).removeClass('spin').addClass('unspin');
   });
+  
+  
+  
   
   // var c = canvas.getContext('2d');
 //   var starClusters = new Stars({context: c, height: (WINDOW_WIDTH * MAIN_IMAGE_RATIO), width: WINDOW_WIDTH});
@@ -87,14 +94,14 @@ $(function(){
     //0, 14.28, 28.57, 42.85, 57.14, 71.43, 85.71
     $lightning = $('.intro__lightning');
     // fraction to place lighting at correct point in image = 45/72
-    var lightTargetHeight = parseInt($BACKGROUND.css("height"))/72*45;
+    var lightTargetHeight = parseInt($intro.css("height"))/72*45;
     $lightning.css({width: WINDOW_WIDTH, height: WINDOW_WIDTH/8, top: (lightTargetHeight + "px")});
   };
   
   var placeSummaryText = function(){
     //manually place summary text a % of the way down the screen
      //NEED TO REPLACE IF WINDOW RESIZED
-    var backgroundHeight = parseInt($BACKGROUND.css('height'));
+    var backgroundHeight = parseInt($intro.css('height'));
     var summaryTextTopPercent = 0.70;
     $('.intro-summary').css({top: backgroundHeight*summaryTextTopPercent});
   };
