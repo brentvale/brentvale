@@ -3,7 +3,8 @@ function HorseRide(options){
   this.windowWidth = options.windowWidth;
   this.left = 0;
   this.speed = 3; //adjust speed as needed
-  // this.setHorseBottom();
+  
+  this.setBottomHeight(this.windowWidth);
   this.gallop();
 };
 
@@ -23,7 +24,16 @@ HorseRide.prototype = {
       that.horseSpriteFrameLoop();
     }, 30);
   },
-  // setHorseBottom: function(){
-  //   $("#contact").css("height");
-  // }
+  updateWindowWidth: function(width){
+    this.windowWidth = width;
+    this.setBottomHeight(width);
+  },
+  setBottomHeight: function(width){
+    //set bottom on #horseSprite div depending on background image size
+    if(width > 1100){
+      $("#horseSprite").css({bottom: "260px"});
+    } else {
+      $("#horseSprite").css({bottom: "177px"});
+    }
+  }
 }

@@ -33,10 +33,8 @@ $(function(){
     $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
     $intro.addClass("fullscreen-mobile");
     $("#games").css({paddingTop: "550px"});
-
-  } else {
-    
   }
+  
   var $experiment = $('#experiment');
   $experiment.css({top: WINDOW_HEIGHT});
   
@@ -106,9 +104,15 @@ $(function(){
     $('.intro-summary').css({top: backgroundHeight*summaryTextTopPercent});
   };
   
+  var newHorseRide = function(){
+    HORSE_RIDE = new HorseRide({windowWidth: WINDOW_WIDTH});
+  };
+  
   window.onload = function(){
     placeLightning();
     placeSummaryText();
+    newHorseRide();
+    
     var lightningStrike = function(){
       setTimeout(function(){$lightning.css({backgroundPosition: " 0 14.28%"})}, 50);
       setTimeout(function(){$lightning.css({backgroundPosition: " 0 28.57%"})}, 100);
@@ -123,15 +127,13 @@ $(function(){
       setTimeout(function(){$lightning.css({backgroundPosition: " 0 42.85%"})}, 600);
     };
     setInterval(lightningStrike, 5000);
-    new HorseRide({windowWidth: WINDOW_WIDTH});
-    //NEED TO HANDLE WINDOW RESIZING WITH LIGHTNING
-    
   };
   $WINDOW.resize(function(){
     setWindowDimensions();
     setCoverDimensions();
     placeLightning();
     placeSummaryText();
+    HORSE_RIDE.updateWindowWidth(WINDOW_WIDTH);
   });
   
 });

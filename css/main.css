@@ -95,7 +95,8 @@ div.intro__hoverable{
 #contact{
   background: url("../images/corn_field_black_sky.jpg");
   background-size: cover;
-  height: 400px;
+  background-repeat: no-repeat;
+  min-height: 400px;
 }
 #games, #work {
   min-height:500px;
@@ -114,6 +115,7 @@ div.intro__hoverable{
   width: 90%;
   min-height:200px;
   padding-bottom:200px;
+  max-width:1000px;
 }
 .game-section-block{
   width: 49%;
@@ -229,7 +231,6 @@ nav ul a{
   cursor:pointer;
   cursor:hand;
 }
-
 @keyframes spin {
 	from { transform: rotateY(0); }
 	to { transform: rotateY(180deg); }
@@ -418,7 +419,10 @@ nav ul a{
 
 }
 @media screen and (min-width: 1100px){
-
+  #contact{
+    background-size:cover;
+    height:575px;
+  }
 }
 @media screen and (max-width: 1000px){
   .intro-summary{
