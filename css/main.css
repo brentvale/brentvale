@@ -98,6 +98,49 @@ div.intro__hoverable{
   background-repeat: no-repeat;
   min-height: 400px;
 }
+#contact .links{
+  width: 500px;
+}
+#email, #resume{
+  vertical-align:top;
+}
+#resume a{
+  text-decoration:none;
+}
+#email:hover p, #email:hover i, #resume:hover p, #resume:hover i{
+  color: #c9c9c9;
+  cursor: hand;
+  cursor: pointer;
+}
+#emailTelephone{
+  margin-top: 30px;
+  color: #6f6f6f;
+}
+#emailTelephone p{
+  margin: 0;
+  font-weight: 400px;
+  color: #c9c9c9;
+}
+i{
+  color: #6f6f6f;
+}
+.icons-container{
+  text-align:center;
+  width:49%;
+  display:inline-block;
+}
+.icons-container i {
+  
+}
+.icons-container p{
+  font-weight: 400;
+  font-size: 1em;
+  color: #6f6f6f;
+}
+.icons-container p.email-address{
+  font-size: 1.5em;
+  font-weight: 700;
+}
 #games, #work {
   min-height:500px;
   background-color:black;
@@ -459,6 +502,9 @@ nav ul a{
   }
 }
 @media screen and (max-width: 700px){
+  #contact .links{
+    width: 400px;
+  }
   #games{
     padding-top:150px;
   }
