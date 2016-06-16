@@ -2,6 +2,7 @@ MAIN_IMAGE_RATIO = 658/2000; //main_background.jpg image_width/image_height
 INTRO_IMAGE_RATIO = 1600/2160; //background_pool_brent_sky_bella.jpg 1600 × 2160
 
 $(function(){
+  
   var setWindowDimensions = function(){
     $WINDOW = $(window);
     WINDOW_WIDTH = $WINDOW.width();
