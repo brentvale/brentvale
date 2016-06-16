@@ -121,6 +121,40 @@ div.intro__hoverable{
   font-weight: 400px;
   color: #c9c9c9;
 }
+
+#email span{
+  visibility:hidden;
+  color: green;
+  font-size: 2em;
+  font-family: 'Raleway', Arial;
+}
+#email span.fading{
+  visibility:visible;
+  bottom: 50px;
+  animation: fade-text 1s forwards;
+}
+
+@-webkit-keyframes fade-text {
+  0%   { opacity: 1.0; }
+  80%   {opacity: 0.4; }
+  100%   {opacity: 0; }
+}
+@-moz-keyframes fade-text {
+  0%   { opacity: 1.0; }
+  80%   {opacity: 0.4; }
+  100%   {opacity: 0; }
+}
+@-o-keyframes fade-text {
+  0%   { opacity: 1.0; }
+  80%   {opacity: 0.4; }
+  100%   {opacity: 0; }
+}
+@keyframes fade-text {
+  0%   { opacity: 1.0; }
+  80%   {opacity: 0.4; }
+  100%   {opacity: 0; }
+}
+
 i{
   color: #6f6f6f;
 }
@@ -128,9 +162,6 @@ i{
   text-align:center;
   width:49%;
   display:inline-block;
-}
-.icons-container i {
-  
 }
 .icons-container p{
   font-weight: 400;
