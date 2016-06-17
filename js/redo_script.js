@@ -1,16 +1,27 @@
 MAIN_IMAGE_RATIO = 658/2000; //main_background.jpg image_width/image_height
 INTRO_IMAGE_RATIO = 1600/2160; //background_pool_brent_sky_bella.jpg 1600 × 2160
+MOBILE = null;
+
+
+var isMobile = function(){
+  var response = MOBILE || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  MOBILE = response;
+  return response;
+}
 
 $(function(){
-  
+  debugger
   var setWindowDimensions = function(){
     $WINDOW = $(window);
     WINDOW_WIDTH = $WINDOW.width();
     WINDOW_HEIGHT = $WINDOW.height();
   };
   
+  var $intro = $("#intro");
+  var $introAlt = $("#introAlt");
+  
   var setCoverDimensions = function(){
-    $("#intro").css({width: WINDOW_WIDTH, height: (WINDOW_WIDTH*2160/1600)});
+    $intro.css({width: WINDOW_WIDTH, height: (WINDOW_WIDTH*2160/1600)});
   };
   
   setWindowDimensions();
@@ -21,12 +32,25 @@ $(function(){
   canvas.height = WINDOW_WIDTH * MAIN_IMAGE_RATIO;
 
   
-  var $intro = $("#intro");
-  var $introAlt = $("#introAlt");
+  
   //load high res images once the rest of the page has loaded
   
   // $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella.jpg')"});
 //   $introAlt.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
+    var backgroundImageUrl;
+    if(isMobile()){
+      backgroundImageUrl = "images/background_pool_brent_sky_bella_color.jpg";
+    } else {
+      backgroundImageUrl = "images/background_pool_brent_sky_bella.jpg";
+    }
+    var downloadingImage = new Image();
+    downloadingImage.onload = function(){
+      $intro.css({backgroundImage: "url('" + backgroundImageUrl + "')"})
+    };
+    downloadingImage.src = backgroundImageUrl;
+
+
+
   
   //hovering over .intro__hoverable replaces background with color image
   $('.intro__hoverable').hover(function(){
@@ -36,15 +60,7 @@ $(function(){
   });
   
   //MOBILE
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    //download color picture before loading
-    var backgroundImageUrl = "images/background_pool_brent_sky_bella_color.jpg";
-    var downloadingImage = new Image();
-    downloadingImage.onload = function(){
-      $('#intro').css({backgroundImage: "url('" + backgroundImageUrl + "')"})
-    };
-    downloadingImage.src = backgroundImageUrl;
-    
+  if(isMobile()) {
     // $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
     $intro.addClass("fullscreen-mobile");
     $("#games").css({paddingTop: "550px"});
