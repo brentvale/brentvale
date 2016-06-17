@@ -35,7 +35,14 @@ $(function(){
   });
   
   //MOBILE
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {    
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    var downloadingImage = new Image();
+    downloadingImage.onload = function(){
+      debugger
+    };
+    downloadingImage.src = "../images/background_pool_brent_sky_bella.jpg";
+    
+    $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
     $intro.addClass("fullscreen-mobile");
     $("#games").css({paddingTop: "550px"});
   }
