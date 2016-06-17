@@ -24,8 +24,9 @@ $(function(){
   var $intro = $("#intro");
   var $introAlt = $("#introAlt");
   //load high res images once the rest of the page has loaded
-  $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella.jpg')"});
-  $introAlt.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
+  
+  // $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella.jpg')"});
+//   $introAlt.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
   
   //hovering over .intro__hoverable replaces background with color image
   $('.intro__hoverable').hover(function(){
@@ -37,11 +38,12 @@ $(function(){
   //MOBILE
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     //download color picture before loading
+    var backgroundImageUrl = "images/background_pool_brent_sky_bella_color.jpg";
     var downloadingImage = new Image();
     downloadingImage.onload = function(){
-      $('#intro').css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"})
+      $('#intro').css({backgroundImage: "url('" + backgroundImageUrl + "')"})
     };
-    downloadingImage.src = "images/background_pool_brent_sky_bella_color.jpg";
+    downloadingImage.src = backgroundImageUrl;
     
     // $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
     $intro.addClass("fullscreen-mobile");
