@@ -1,0 +1,22 @@
+{
+  "name": "portfolio_website_brent_vale",
+  "version": "1.0.0",
+  "description": "portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brentvale/brentvale.git"
+  },
+  "author": "brent vale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brentvale/brentvale/issues"
+  },
+  "homepage": "https://github.com/brentvale/brentvale#readme",
+  "dependencies": {
+    "clipboard": "^1.5.12"
+  }
+}

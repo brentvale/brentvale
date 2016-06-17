@@ -2,6 +2,7 @@ MAIN_IMAGE_RATIO = 658/2000; //main_background.jpg image_width/image_height
 INTRO_IMAGE_RATIO = 1600/2160; //background_pool_brent_sky_bella.jpg 1600 × 2160
 
 $(function(){
+  
   var setWindowDimensions = function(){
     $WINDOW = $(window);
     WINDOW_WIDTH = $WINDOW.width();
@@ -21,6 +22,11 @@ $(function(){
 
   
   var $intro = $("#intro");
+  var $introAlt = $("#introAlt");
+  //load high res images once the rest of the page has loaded
+  $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella.jpg')"});
+  $introAlt.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
+  
   //hovering over .intro__hoverable replaces background with color image
   $('.intro__hoverable').hover(function(){
     $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});

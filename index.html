@@ -21,6 +21,7 @@
     ga('send', 'pageview');
 
   </script>
+    
 </head>
 
 <body>
@@ -110,8 +111,6 @@
   
   <section id="intro">
     <div id="introAlt"></div>
-    <!-- <img id="mainBackground" src="images/background_pool_brent_sky_bella.jpg" alt="Brent Vale standing in flooded corral while horses watch."></img> -->
-    
     <div class="intro__hoverable"></div>
     <div class="intro__title" data-type="parallax-image" data-speed="5">
       coding&nbsp;
@@ -194,21 +193,22 @@
   
   <section id="contact">
     <div class="links center-block">
-      <div id="email" class="icons-container">
+      <div id="email" class="icons-container" data-clipboard-action="copy" data-clipboard-text="brentvale@gmail.com">
         <i class="fa fa-envelope-o fa-5x"></i><br/>
         <p>Copy My Email to<br/> Clipboard</p>
+        <span>Copied!</span>
       </div>
       <div id="resume" class="icons-container">
-        <i class="fa fa-file-text-o fa-5x"></i><br/>
         <a href="https://docs.google.com/document/d/1FJgRHKVu7KT7A4yoWlzjs1Er-GjFn8yxG_qgkef4J6Y/edit?usp=sharing" alt="Brent Vale Google Docs Resume" target="_blank">
+          <i class="fa fa-file-text-o fa-5x"></i><br/>
+        
           <p>View Resume in <br/>Google Docs</p>
         </a>
       </div>
     </div>
     <div id="emailTelephone" class="center-block">
-      <p class="">brentvale@gmail.com</p>
-      <p class="">650.799.2378</p>
-      
+      <p>brentvale@gmail.com</p>
+      <p>650.799.2378</p>
     </div>
     
     <div id="horseSprite"></div>
@@ -220,11 +220,32 @@
     <img src="images/background_pool_brent_sky_bella_color.jpg" />
   </div>
   
-  <script src="js/stars.js"></script>
-  <script src="js/star.js"></script>
   <script src="js/jquery.transit.min.js"></script>
   <script src="js/redo_script.js"></script>
   <script src="js/horse_ride.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <script>
+  var clipboard = new Clipboard('#email');
+  
+  clipboard.on('success', function(e) {
+      var $emailSpan = $("#email span");
+      $emailSpan.addClass("fading");
+    
+      setTimeout(function(){
+        $emailSpan.removeClass("fading")
+      }, 1000);
+    
+      e.clearSelection();
+  });
+
+  clipboard.on('error', function(e) {
+      console.error('Action:', e.action);
+      console.error('Trigger:', e.trigger);
+  });
+
+  
+  </script>
   
   
 </body>
