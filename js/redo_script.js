@@ -36,13 +36,14 @@ $(function(){
   
   //MOBILE
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    //download color picture before loading
     var downloadingImage = new Image();
     downloadingImage.onload = function(){
-      debugger
+      $('#intro').css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"})
     };
-    downloadingImage.src = "../images/background_pool_brent_sky_bella.jpg";
+    downloadingImage.src = "images/background_pool_brent_sky_bella_color.jpg";
     
-    $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
+    // $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
     $intro.addClass("fullscreen-mobile");
     $("#games").css({paddingTop: "550px"});
   }
