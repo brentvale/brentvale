@@ -1,5 +1,6 @@
 :root {
   --ship-color: #00b6e5;
+  --battleship-color: #69a9e3;
 }
 
 html{
@@ -203,6 +204,12 @@ i{
 #work h2 span{
   font-size: .65em;
 }
+#games h3{
+  font-size: 3em;
+  font-family: 'Raleway', Arial;
+  color: var(--battleship-color);
+  margin-top:0px;
+}
 /* GAMES */
 #games div:first-child, #work div:first-child{
   text-align:center;
@@ -261,7 +268,7 @@ img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, im
   color:red;
 }
 #battleshipDescription p a{
-  color:#69a9e3;
+  color:var(--battleship-color);
 }
 /* NAV */
 nav {
