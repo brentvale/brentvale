@@ -797,5 +797,8 @@ nav ul a{
   #shipImage{
     opacity: 1.0;
   }
+  #email p, #resume p {
+    font-size: 2em;
+  }
 }
 
