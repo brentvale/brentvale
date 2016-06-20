@@ -28,13 +28,13 @@ img{
 }
 section#intro{
   margin-bottom:-5px;
-  background-image: url("../images/background_pool_brent_sky_bella.jpg");
+  background-image: url("../images/background_pool_brent_sky_bella_low_res.jpg");
   background-size:cover;
   background-repeat:no-repeat;
   min-height:600px;
 }
 div#introAlt{
-  background-image: url("../images/background_pool_brent_sky_bella_color.jpg");
+  background-image: url("../images/background_pool_brent_sky_bella_color_low_res.jpg");
   display:none;
 }
 div.intro__title{
@@ -97,7 +97,7 @@ div.intro__hoverable{
   margin-bottom: -5px;
 }
 #contact{
-  background: url("../images/corn_field_black_sky.jpg");
+  background: url("../images/corn_field_black_sky_low_res.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 400px;
@@ -308,7 +308,7 @@ nav ul a{
   height: 40px;
   width: 40px;
   padding: 1px;
-  background: url("../images/all_logos_crates_web.png");
+  background: url("../images/all_logos_crates_web_low_res.jpg");
   background-size:400%;
 }
 #linkedIn, #twitter, #github, #youTube, #instagram {
