@@ -3,8 +3,8 @@ var INTRO_IMAGE_RATIO = 1600/2160; //background_pool_brent_sky_bella.jpg 1600 
 var MOBILE = null;
 
 var IMAGE_URLS = [
+  {high_res: "images/SHIP_thumbnail_high_res.jpg", low_res: "images/SHIP_thumbnail_low_res.jpg"},
   {high_res: "images/Battleship_Background_Game_Site.jpg", low_res: "images/Battleship_Background_Game_Site_low_res.jpg"},
-
   {high_res: "images/minesweeper_shadow_large.jpg", low_res: "images/minesweeper_shadow_large_low_res.jpg"},
   {high_res: "images/yellow_dragon_web.gif", low_res: "images/yellow_dragon_web_low_res.jpg"}
 ]
@@ -99,7 +99,7 @@ $(function(){
   if(isMobile()) {
     // $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
     $intro.addClass("fullscreen-mobile");
-    $("#games").css({paddingTop: "550px"});
+    $("#work").css({paddingTop: "550px"});
   }
   
   var $experiment = $('#experiment');

@@ -177,14 +177,31 @@ i{
   font-weight: 700;
 }
 #games, #work {
-  min-height:500px;
   background-color:black;
+}
+#games{
+  min-height:500px;
+}
+#work{
+  min-height:300px;
+}
+#shipImage{
+  opacity: 0.9;
+}
+#shipImage:hover{
+  opacity: 1.0;
+  cursor: hand;
+  cursor: pointer;
 }
 /* WORK */
 #work h2{
   font-size: 3em;
   font-family: 'Raleway', Arial;
   color: var(--ship-color);
+  margin-top:0px;
+}
+#work h2 span{
+  font-size: .65em;
 }
 /* GAMES */
 #games div:first-child, #work div:first-child{
@@ -192,7 +209,10 @@ i{
 }
 #gameHeadingImage, #workHeadingImage{
   max-width: 500px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+#workHeadingImage{
+  margin-top: 100px;
 }
 .main-block{
   width: 90%;
@@ -530,7 +550,7 @@ nav ul a{
   #home{
    min-height:500px;
   }
-  #games, #work{
+  #work{
     padding-top:50px;
   }
 }
@@ -553,7 +573,7 @@ nav ul a{
   #contact .links{
     width: 400px;
   }
-  #games, #work{
+  #work{
     padding-top:150px;
   }
  div.intro__title{
@@ -596,7 +616,7 @@ nav ul a{
     padding-left:0px;
     text-align:center;
   }
-  #games,#work{
+  #work{
     padding-top:200px;
   }
   .face {
@@ -651,7 +671,7 @@ nav ul a{
   }
 }
 @media screen and (max-width: 500px){
-  #games, #work{
+  #work{
     padding-top:300px;
   }
   div.intro__title{
@@ -753,7 +773,7 @@ nav ul a{
   section#intro{
     background-image: url("../images/background_pool_brent_sky_bella_low_res.jpg");
   }
-  #games, #work{
+  #work{
     padding-top:300px;
   }
   #about, #games, #work {
@@ -765,6 +785,9 @@ nav ul a{
   img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, img#shipImage{
     width:80%;
     margin-left:10%;
+  }
+  #shipImage{
+    opacity: 1.0;
   }
 }
 
