@@ -251,6 +251,7 @@ img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, im
 }
 .game-description p a, .work-description p a{
   text-decoration:underline;
+  font-weight:400;
 }
 .game-description p a{
   color: yellow;
