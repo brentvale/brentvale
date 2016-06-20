@@ -1,3 +1,7 @@
+:root {
+  --ship-color: #00b6e5;
+}
+
 html{
   font-size: 16px;
   height:100%;
@@ -176,27 +180,32 @@ i{
   min-height:500px;
   background-color:black;
 }
-
+/* WORK */
+#work h2{
+  font-size: 3em;
+  font-family: 'Raleway', Arial;
+  color: var(--ship-color);
+}
 /* GAMES */
-#games div:first-child{
+#games div:first-child, #work div:first-child{
   text-align:center;
 }
-#gameHeadingImage{
+#gameHeadingImage, #workHeadingImage{
   max-width: 500px;
   margin-bottom: 100px;
 }
-.game-block{
+.main-block{
   width: 90%;
   min-height:200px;
   padding-bottom:200px;
   max-width:1000px;
 }
-.game-section-block{
+.main-section-block{
   width: 49%;
   display:inline-block;
   vertical-align:top;
 }
-.game-section-block img{
+.main-section-block img{
   height:100%;
 }
 img#flappyDragonHeading, img#minesweeperHeading{
@@ -204,20 +213,28 @@ img#flappyDragonHeading, img#minesweeperHeading{
   width:50%;
   margin-bottom: 0px;
 }
-img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage{
+img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, img#shipImage{
+  border-radius: 4px;
   width:75%;
-  padding-left:24%;
+  margin-left:24%;
 }
-
-.game-description p{
+.game-description p, .work-description p{
   color:white;
   text-align:left;
 }
-.game-description p a{
+.game-description p a, .work-description p a{
   text-decoration:underline;
+}
+.game-description p a{
   color: yellow;
 }
-.game-description p.game-links{
+.work-description p a{
+  color: var(--ship-color);
+}
+/* #00b6e5 */
+/* #009bbf */
+/* #00657f */
+.game-description p.game-links, .work-description p.work-links{
   padding-left:20px;
 }
 #minesweeperDescription p a{
@@ -513,7 +530,7 @@ nav ul a{
   #home{
    min-height:500px;
   }
-  #games{
+  #games, #work{
     padding-top:50px;
   }
 }
@@ -536,7 +553,7 @@ nav ul a{
   #contact .links{
     width: 400px;
   }
-  #games{
+  #games, #work{
     padding-top:150px;
   }
  div.intro__title{
@@ -568,18 +585,18 @@ nav ul a{
  
 }
 @media screen and (max-width: 600px){
-  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage{
+  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, img#shipImage{
     width:80%;
-    padding-left:10%;
+    margin-left:10%;
   }
-  .game-section-block{
+  .main-section-block{
     width: 100%;
   }
-  .game-description p.game-links{
+  .game-description p.game-links, .work-description p.work-links{
     padding-left:0px;
     text-align:center;
   }
-  #games{
+  #games,#work{
     padding-top:200px;
   }
   .face {
@@ -634,7 +651,7 @@ nav ul a{
   }
 }
 @media screen and (max-width: 500px){
-  #games{
+  #games, #work{
     padding-top:300px;
   }
   div.intro__title{
@@ -657,10 +674,10 @@ nav ul a{
     text-align:center;
     font-weight:100;
   }
-  .game-section-block{
+  .main-section-block{
     width: 100%;
   }
-  .game-description p{
+  .game-description p, .work-description p{
     font-size:3em;
     text-align:center;
     width:90%;
@@ -733,18 +750,21 @@ nav ul a{
     height: 100px;
     width: 100px;
   }
-  #games{
+  section#intro{
+    background-image: url("../images/background_pool_brent_sky_bella_low_res.jpg");
+  }
+  #games, #work{
     padding-top:300px;
   }
-  #about, #games {
+  #about, #games, #work {
     margin-bottom: -2px;
   }
   .intro-summary{
     width:80%;
   }
-  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage{
+  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, img#shipImage{
     width:80%;
-    padding-left:10%;
+    margin-left:10%;
   }
 }
 
