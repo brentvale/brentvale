@@ -35,10 +35,6 @@ $(function(){
   
   setWindowDimensions();
   setCoverDimensions();
-  
-  var canvas = document.getElementById('homeCanvas'); 
-  canvas.width = WINDOW_WIDTH;
-  canvas.height = WINDOW_WIDTH * MAIN_IMAGE_RATIO;
 
   //load high res images once the rest of the page has loaded
   //part 1 background image
@@ -58,7 +54,7 @@ $(function(){
   var cornImageUrl = "images/corn_field_black_sky.jpg";
   var downloadingImageCorn = new Image();
   downloadingImageCorn.onload = function(){
-    $("#contact").css({backgroundImage: "url('" + cornImageUrl + "')"})
+    $("footer").css({backgroundImage: "url('" + cornImageUrl + "')"})
   };
   downloadingImageCorn.src = cornImageUrl;
   
