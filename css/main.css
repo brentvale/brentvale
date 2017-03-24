@@ -116,21 +116,47 @@ div.intro__hoverable{
   margin-right:auto;
 }
 .intro-summary{
-  position:absolute;
+	border-radius:5px;
   color: white;
+	position:absolute;
+	top:600px;
   width: 60%;
-  background-color: rgba(0,0,0,0.3);
-  padding:20px;
-  border-radius:5px;
-  top:600px;
 }
-#horseSprite{
+.intro-summary div{
+	background-color: rgba(0,0,0,0.3);
+	padding:20px;
+}
+.hobby-image{
+	vertical-align:top;
+	border-radius: 4px;
+	border:2px solid #fff;
+	opacity:0.9;
+}
+.hobby-image:hover{
+	opacity:1.0;
+}
+.hobby-link-image-container{
+	width:100%;
+	margin-top:30px;
+}
+.hobby-link{
+	font-size:2em;
+	font-family: 'Raleway', Arial;
+	color:#fff;
+}
+.hobby-links span{
+	font-size:2em;
+	color:#fff;
+}
+#horseSprite, #horseSpriteStationary{
   background-image:url("../images/horse_sprite_small_pasture_one_third.png");
+	background-position: 0 0;
   height: 36px;
   width: 50px;
-  background-position: 0 0;
+}
+#horseSprite{
+	bottom:177px;
   position:absolute;
-  bottom:177px;
 }
 footer{
   background: url("../images/corn_field_black_sky_low_res.jpg");

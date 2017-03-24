@@ -157,11 +157,24 @@ $(function(){
      //NEED TO REPLACE IF WINDOW RESIZED
     var backgroundHeight = parseInt($intro.css('height'));
     var summaryTextTopPercent = 0.70;
-    $('.intro-summary').css({top: backgroundHeight*summaryTextTopPercent});
+    $('.intro-summary div').css({"margin-top": backgroundHeight*summaryTextTopPercent-600, "position":"relative"});
+		
+		//add additional padding to work section to make sure summary text and work section don't overlap
+		var height = $('.intro-summary').height();
+		var position = $('.intro-summary').position().top;
+		
+		//top of work should be ~100px below bottom of intro-summary
+		//bottom of intro-summary calculated by height of div plus distance to top of page
+		
+		var workPositionTop = $('#work').position().top;
+		var paddingDifference = (height+position)-workPositionTop;
+		
+		$('#work').css({"padding-top": paddingDifference})
   };
   
   var newHorseRide = function(){
     HORSE_RIDE = new HorseRide({windowWidth: WINDOW_WIDTH});
+		HORSE_RIDE_STATIONARY = new HorseSpriteStationary();
   };
   
   window.onload = function(){
