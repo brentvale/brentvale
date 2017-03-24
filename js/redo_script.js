@@ -39,54 +39,6 @@ $(function(){
   
   setWindowDimensions();
   setCoverDimensions();
-
-  //load high res images once the rest of the page has loaded
-  //part 1 background image
-  var backgroundImageUrl;
-  if(isMobile()){
-    backgroundImageUrl = "images/background_pool_brent_sky_bella_color.jpg";
-  } else {
-    backgroundImageUrl = "images/background_pool_brent_sky_bella.jpg";
-  }
-  var downloadingImageBackground = new Image();
-  downloadingImageBackground.onload = function(){
-    $intro.css({backgroundImage: "url('" + backgroundImageUrl + "')"})
-  };
-  downloadingImageBackground.src = backgroundImageUrl;
-  
-  //part 2 corn_field image
-  var cornImageUrl = "images/corn_field_black_sky.jpg";
-  var downloadingImageCorn = new Image();
-  downloadingImageCorn.onload = function(){
-    $("footer").css({backgroundImage: "url('" + cornImageUrl + "')"})
-  };
-  downloadingImageCorn.src = cornImageUrl;
-  
-  //IMAGE_URLS
-  //part 3 the rest
-  var documentImages = document.images;
-  for(var d = 0; d < documentImages.length; d ++){
-    DOCUMENT_IMAGES.push({src:$(documentImages[d]).attr("src"), img: documentImages[d]});
-  }
-  
-  for(var i = 0; i < IMAGE_URLS.length; i++){
-    var downloadingImage = new Image();
-    
-    downloadingImage.onload = function(){
-      //find element on page with this.src + low_res
-      var temp = $(this).attr("src");
-      
-      //go through each DOCUMENT_IMAGES, 
-      //N^2 time complexity
-      for(var j = 0; j < DOCUMENT_IMAGES.length; j ++){
-        //requires image srcs match to 20 characters
-        if(DOCUMENT_IMAGES[j].src.slice(0,20) == temp.toString().slice(0,20)){
-          DOCUMENT_IMAGES[j].img.src = temp.toString();
-        }
-      }
-    }
-    downloadingImage.src = IMAGE_URLS[i].high_res;
-  }
   
   //hovering over .intro__hoverable replaces background with color image
   $('.intro__hoverable').hover(function(){
@@ -200,6 +152,7 @@ $(function(){
     };
     setInterval(lightningStrike, 5000);
   };
+	
   $WINDOW.resize(function(){
     setWindowDimensions();
     setCoverDimensions();
@@ -207,5 +160,54 @@ $(function(){
     placeSummaryText();
     HORSE_RIDE.updateWindowWidth(WINDOW_WIDTH);
   });
+	
+	//IMAGE PLACEMENT
+  //load high res images once the rest of the page has loaded
+  //part 1 background image
+  var backgroundImageUrl;
+  if(isMobile()){
+    backgroundImageUrl = "images/background_pool_brent_sky_bella_color.jpg";
+  } else {
+    backgroundImageUrl = "images/background_pool_brent_sky_bella.jpg";
+  }
+  var downloadingImageBackground = new Image();
+  downloadingImageBackground.onload = function(){
+    $intro.css({backgroundImage: "url('" + backgroundImageUrl + "')"})
+  };
+  downloadingImageBackground.src = backgroundImageUrl;
+  
+  //part 2 corn_field image
+  var cornImageUrl = "images/corn_field_black_sky.jpg";
+  var downloadingImageCorn = new Image();
+  downloadingImageCorn.onload = function(){
+    $("footer").css({backgroundImage: "url('" + cornImageUrl + "')"})
+  };
+  downloadingImageCorn.src = cornImageUrl;
+  
+  //IMAGE_URLS
+  //part 3 the rest
+  var documentImages = document.images;
+  for(var d = 0; d < documentImages.length; d ++){
+    DOCUMENT_IMAGES.push({src:$(documentImages[d]).attr("src"), img: documentImages[d]});
+  }
+  
+  for(var i = 0; i < IMAGE_URLS.length; i++){
+    var downloadingImage = new Image();
+    
+    downloadingImage.onload = function(){
+      //find element on page with this.src + low_res
+      var temp = $(this).attr("src");
+      
+      //go through each DOCUMENT_IMAGES, 
+      //N^2 time complexity
+      for(var j = 0; j < DOCUMENT_IMAGES.length; j ++){
+        //requires image srcs match to 20 characters
+        if(DOCUMENT_IMAGES[j].src.slice(0,20) == temp.toString().slice(0,20)){
+          DOCUMENT_IMAGES[j].img.src = temp.toString();
+        }
+      }
+    }
+    downloadingImage.src = IMAGE_URLS[i].high_res;
+  }
   
 });
