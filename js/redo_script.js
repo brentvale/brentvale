@@ -6,7 +6,11 @@ var IMAGE_URLS = [
   {high_res: "images/SHIP_mac_screens_high_res.jpg", low_res: "images/SHIP_mac_screens_low_res.jpg"},
   {high_res: "images/Battleship_Background_Game_Site.jpg", low_res: "images/Battleship_Background_Game_Site_low_res.jpg"},
   {high_res: "images/minesweeper_shadow_large.jpg", low_res: "images/minesweeper_shadow_large_low_res.jpg"},
-  {high_res: "images/yellow_dragon_web.gif", low_res: "images/yellow_dragon_web_low_res.jpg"}
+  {high_res: "images/yellow_dragon_web.gif", low_res: "images/yellow_dragon_web_low_res.jpg"},
+	{high_res: "images/the_basin_street_boys_band_high_res.jpg", low_res: "images/the_basin_street_boys_band_low_res.jpg"},
+	{high_res: "images/brent_and_big_paint_high_res.jpg", low_res: "images/brent_and_big_paint_low_res.jpg"},
+	{high_res: "images/eggcellent_tracker_app_high_res.jpg", low_res: "images/eggcellent_tracker_app_low_res.jpg"},
+	{high_res: "images/calaveras_creek_high_res.png", low_res: "images/calaveras_creek_low_res.png"}
 ]
   
 var DOCUMENT_IMAGES = [];
@@ -95,7 +99,6 @@ $(function(){
   if(isMobile()) {
     // $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
     $intro.addClass("fullscreen-mobile");
-    $("#work").css({paddingTop: "550px"});
   }
   
   var $experiment = $('#experiment');
