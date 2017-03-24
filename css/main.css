@@ -2,6 +2,7 @@
   --ship-color: #00b6e5;
   --battleship-color: #69a9e3;
   --heart-color: #ff2a1a;
+	--cc-color: #a208c4;
 }
 
 html{
@@ -14,13 +15,29 @@ body{
   font-family: 'Rye', cursive;
   position:relative;
 }
-p {
+p{
+	font-size:1.5em;
+}
+ul{
+	font-size:2.5em;
+	list-style-type:none;
+}
+p, ul {
+	color: white;
   font-family: 'Raleway', Arial;
   letter-spacing:1.5px;
-  font-size:1.5em;
   line-height:1.75em;
   text-align:center;
   font-weight:100;
+}
+li {
+  padding-left: 1em; 
+  text-indent: -.7em;
+}
+li::before {
+  content: "• ";
+  color: var(--cc-color); /* or whatever color you prefer */
+	font-size:1.5em;
 }
 /*COLORS*/
 .ship-color{
@@ -220,6 +237,18 @@ i{
   font-family: 'Raleway', Arial;
   color: var(--battleship-color);
   margin-top:0px;
+}
+#calaverasCreekImage{
+	height:auto;
+	opacity:0.9;
+	width:800px;
+}
+
+.cc-color{
+	color: var(--cc-color);
+}
+#calaverasCreekImage:hover{
+	opacity:1.0;
 }
 /* GAMES */
 #games div:first-child, #work div:first-child{
@@ -627,7 +656,7 @@ nav ul a{
  
 }
 @media screen and (max-width: 600px){
-  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, img#shipImage{
+  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, img#shipImage, img#calaverasCreekImage{
     width:80%;
     margin-left:10%;
   }
@@ -804,7 +833,7 @@ nav ul a{
   .intro-summary{
     width:80%;
   }
-  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, img#shipImage{
+  img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, img#shipImage, img#calaverasCreekImage{
     width:80%;
     margin-left:10%;
   }
