@@ -97,7 +97,6 @@ $(function(){
   
   //MOBILE
   if(isMobile()) {
-    // $intro.css({backgroundImage: "url('images/background_pool_brent_sky_bella_color.jpg')"});
     $intro.addClass("fullscreen-mobile");
   }
   
@@ -125,6 +124,7 @@ $(function(){
       $parallaxImage.css({ top: parsedTop });
     });
   });
+	
   //sections with background
   $('section[data-type="background"]').each(function(){
     var $bgobj = $(this); // assigning the object
