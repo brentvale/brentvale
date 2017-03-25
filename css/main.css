@@ -148,6 +148,20 @@ div.intro__hoverable{
 	font-size:2em;
 	color:#fff;
 }
+.summary-link{
+	color: white;
+	text-decoration:none;
+}
+.summary-link span{
+	padding:2px;
+	border-bottom: 1px solid white;
+}
+.summary-link:hover{
+	color: #ababab;
+}
+.summary-link:hover span{
+	border-bottom: 1px solid #ababab;
+}
 #horseSprite, #horseSpriteStationary{
   background-image:url("../images/horse_sprite_small_pasture_one_third.png");
 	background-position: 0 0;
