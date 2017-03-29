@@ -1,6 +1,7 @@
 var MAIN_IMAGE_RATIO = 658/2000; //main_background.jpg image_width/image_height
 var INTRO_IMAGE_RATIO = 1600/2160; //background_pool_brent_sky_bella.jpg 1600 × 2160
 var MOBILE = null;
+var WINDOW_WIDTH, WINDOW_HEIGHT;
 
 var IMAGE_URLS = [
   {high_res: "images/SHIP_mac_screens_high_res.jpg", low_res: "images/SHIP_mac_screens_low_res.jpg"},
@@ -128,8 +129,8 @@ $(function(){
   };
   
   var newHorseRide = function(){
-    HORSE_RIDE = new HorseRide({windowWidth: WINDOW_WIDTH});
-		HORSE_RIDE_STATIONARY = new HorseSpriteStationary();
+    var HORSE_RIDE = new HorseRide({windowWidth: WINDOW_WIDTH});
+		var HORSE_RIDE_STATIONARY = new HorseSpriteStationary();
   };
   
   window.onload = function(){
