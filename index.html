@@ -309,7 +309,7 @@
         <h2>Snowboarding</h2>
         <div class="game-description">
           <p>There&#39;s not much more thrilling that tearing up the mountain after a fresh snow.  Nothing more fun that spending a beautiful day outdoors with your friends.</p>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/j5sYjttLjL4" frameborder="0" allowfullscreen></iframe>
+					<iframe id="youtubeSnowboard" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -319,7 +319,7 @@
        <h2>Chickens!</h2>
        <div class="game-description">
          <p>Watching chicken TV is hands down the best station to watch.  We have 8 laying hens, so we enjoy fresh eggs daily.  Here&#39;s their pretty little home built with leftovers from a&nbsp;barn.</p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/-oWFcyOQed4" frameborder="0" allowfullscreen></iframe>
+				<iframe id="youtubeChickenCoop" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
        </div>
      </div>
    </div>
@@ -332,7 +332,7 @@
        </div>
 			<div class="game-description hobby-links">
 				<div style="width:40%; display:inline-block;padding:2%">
-	        <iframe width="" height="" src="https://www.youtube.com/embed/PLlrmsRwxEI" frameborder="0" allowfullscreen></iframe>
+	        <iframe id="youtubeBrentRide" width="" height="" src="" frameborder="0" allowfullscreen></iframe>
 					<p style="font-size:1.2em">Horse sprite image created from frames in this riding video. Also seen at bottom of page running through&nbsp;corn fields.</p>
 					<div style="text-align:center">
 						<div id="horseSpriteStationary" style="display:inline-block"></div>
@@ -399,8 +399,18 @@
       console.error('Action:', e.action);
       console.error('Trigger:', e.trigger);
   });
+	
+	
+	$(document).ready(function(){
+		setTimeout(function(){
+			$('#youtubeSnowboard').attr("src", "https://www.youtube.com/embed/j5sYjttLjL4");
+			
+			$('#youtubeChickenCoop').attr("src", "https://www.youtube.com/embed/-oWFcyOQed4");
+			
+			$('#youtubeBrentRide').attr("src", "https://www.youtube.com/embed/PLlrmsRwxEI");
+		}, 10000);
+	});
 
-  
   </script>
   
   
