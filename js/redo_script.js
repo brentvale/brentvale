@@ -133,9 +133,9 @@ $(function(){
 		var HORSE_RIDE_STATIONARY = new HorseSpriteStationary();
   };
   
+	placeSummaryText();
   window.onload = function(){
     placeLightning();
-    placeSummaryText();
     newHorseRide();
     
     var lightningStrike = function(){
