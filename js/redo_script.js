@@ -129,8 +129,8 @@ $(function(){
   };
   
   var newHorseRide = function(){
-    var HORSE_RIDE = new HorseRide({windowWidth: WINDOW_WIDTH});
-		var HORSE_RIDE_STATIONARY = new HorseSpriteStationary();
+    HORSE_RIDE = new HorseRide({windowWidth: WINDOW_WIDTH});
+		HORSE_RIDE_STATIONARY = new HorseSpriteStationary();
   };
   
 	placeSummaryText();
