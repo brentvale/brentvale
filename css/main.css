@@ -16,23 +16,23 @@ body{
   font-family: 'Rye', cursive;
   position:relative;
 }
-h1, h2, p, ul{
-	color:white;
-	font-family: 'Raleway', Arial;
+/*h1, h2, p, ul{
+  color:white;
+  font-family: 'Raleway', Arial;
 }
 h1{
   font-size: 8em;
-	text-align:center;
+  text-align:center;
 }
 h2{
-	font-size:3em;
+  font-size:3em;
 }
 p{
-	font-size:1.5em;
+  font-size:1.5em;
 }
 ul{
-	font-size:2.5em;
-	list-style-type:none;
+  font-size:2.5em;
+  list-style-type:none;
 }
 p, ul {
   font-family: 'Raleway', Arial;
@@ -42,13 +42,13 @@ p, ul {
   font-weight:100;
 }
 li {
-  padding-left: 1em; 
+  padding-left: 1em;
   text-indent: -.7em;
 }
 li::before {
   content: "• ";
   color: var(--cc-color); /* or whatever color you prefer */
-	font-size:1.5em;
+  font-size:1.5em;
 }
 /*COLORS*/
 .ship-color{
@@ -117,60 +117,60 @@ div.intro__hoverable{
   margin-right:auto;
 }
 .intro-summary{
-	border-radius:5px;
+  border-radius:5px;
   color: white;
-	position:absolute;
-	top:600px;
+  position:absolute;
+  top:600px;
   width: 60%;
 }
 .intro-summary div{
-	background-color: rgba(0,0,0,0.3);
-	padding:20px;
+  background-color: rgba(0,0,0,0.3);
+  padding:20px;
 }
 .hobby-image{
-	vertical-align:top;
-	border-radius: 4px;
-	border:2px solid #fff;
-	opacity:0.9;
+  vertical-align:top;
+  border-radius: 4px;
+  border:2px solid #fff;
+  opacity:0.9;
 }
 .hobby-image:hover{
-	opacity:1.0;
+  opacity:1.0;
 }
 .hobby-link-image-container{
-	width:100%;
-	margin-top:30px;
+  width:100%;
+  margin-top:30px;
 }
 .hobby-link{
-	font-size:2em;
-	font-family: 'Raleway', Arial;
-	color:#fff;
+  font-size:2em;
+  font-family: 'Raleway', Arial;
+  color:#fff;
 }
 .hobby-links span{
-	font-size:2em;
-	color:#fff;
+  font-size:2em;
+  color:#fff;
 }
 .summary-link{
-	color: white;
-	text-decoration:none;
+  color: white;
+  text-decoration:none;
 }
 .summary-link span{
-	padding:2px;
-	border-bottom: 1px solid white;
+  padding:2px;
+  border-bottom: 1px solid white;
 }
 .summary-link:hover{
-	color: #ababab;
+  color: #ababab;
 }
 .summary-link:hover span{
-	border-bottom: 1px solid #ababab;
+  border-bottom: 1px solid #ababab;
 }
 #horseSprite, #horseSpriteStationary{
   background-image:url("../images/horse_sprite_small_pasture_one_third.png");
-	background-position: 0 0;
+  background-position: 0 0;
   height: 36px;
   width: 50px;
 }
 #horseSprite{
-	bottom:177px;
+  bottom:177px;
   position:absolute;
 }
 footer{
@@ -288,20 +288,20 @@ i{
   margin-top:0px;
 }
 #calaverasCreekImage{
-	height:auto;
-	opacity:0.9;
-	width:800px;
+  height:auto;
+  opacity:0.9;
+  width:800px;
 }
 
 .cc-color{
-	color: var(--cc-color);
+  color: var(--cc-color);
 }
 #calaverasCreekImage:hover{
-	opacity:1.0;
+  opacity:1.0;
 }
 /* GAMES */
 #games h1{
-	margin-top:0;
+  margin-top:0;
 }
 #games div:first-child, #work div:first-child{
   text-align:center;
@@ -446,19 +446,19 @@ nav ul a{
   cursor:hand;
 }
 @keyframes spin {
-	from { transform: rotateY(0); }
-	to { transform: rotateY(180deg); }
+  from { transform: rotateY(0); }
+  to { transform: rotateY(180deg); }
 }
 @keyframes unspin {
-	from { transform: rotateY(180deg); }
-	to { transform: rotateY(0); }
+  from { transform: rotateY(180deg); }
+  to { transform: rotateY(0); }
 }
 #instagram.spin, #linkedIn.spin, #twitter.spin, #github.spin, #youTube.spin {
-	animation: spin 0.2s linear;
+  animation: spin 0.2s linear;
   -webkit-animation-fill-mode: forwards;
 }
 #instagram.unspin, #linkedIn.unspin, #twitter.unspin, #github.unspin, #youTube.unspin {
-	animation: unspin 0.2s linear;
+  animation: unspin 0.2s linear;
 }
 
 #linkedIn {
@@ -665,7 +665,7 @@ nav ul a{
     height: 50px;
     width: 50px;
   }
-  div.intro__quote{   
+  div.intro__quote{
     font-size: 1.5em;
   }
   #home{
@@ -705,7 +705,7 @@ nav ul a{
  #navFive{
    background-position: 0 -56px;
  }
- 
+
 }
 @media screen and (max-width: 600px){
   img#minesweeperGameImage, img#battleshipGameImage, img#flappyDragonGameImage, img#shipImage, img#calaverasCreekImage{
@@ -729,23 +729,23 @@ nav ul a{
   #instagram .one,#github .one, #youTube .one, #linkedIn .one, #twitter .one{
   -webkit-transform: rotateX(90deg) translateZ(10px);
   }
-  
+
   #instagram .two,#github .two, #youTube .two, #linkedIn .two, #twitter .two{
     -webkit-transform: translateZ(10px);
   }
-  
+
   #instagram .three,#github .three, #youTube .three, #linkedIn .three, #twitter .three{
     -webkit-transform: rotateY(90deg) translateZ(10px);
   }
-  
+
   #instagram .four,#github .four, #youTube .four, #linkedIn .four, #twitter .four{
     -webkit-transform: rotateY(180deg) translateZ(10px);
   }
-  
+
   #instagram .five,#github .five, #youTube .five, #linkedIn .five, #twitter .five{
     -webkit-transform: rotateY(-90deg) translateZ(10px);
   }
-  
+
   #instagram .six,#github .six, #youTube .six, #linkedIn .six, #twitter .six{
     -webkit-transform: rotateX(-90deg) translateZ(10px) rotate(180deg);
   }
@@ -784,7 +784,7 @@ nav ul a{
     height: 25px;
     width: 25px;
   }
-  div.intro__quote{   
+  div.intro__quote{
     font-size: 1.0em;
   }
   #home{
@@ -812,23 +812,23 @@ nav ul a{
   #instagram .one,#github .one, #youTube .one, #linkedIn .one, #twitter .one{
   -webkit-transform: rotateX(90deg) translateZ(40px);
   }
-  
+
   #instagram .two,#github .two, #youTube .two, #linkedIn .two, #twitter .two{
     -webkit-transform: translateZ(40px);
   }
-  
+
   #instagram .three,#github .three, #youTube .three, #linkedIn .three, #twitter .three{
     -webkit-transform: rotateY(90deg) translateZ(40px);
   }
-  
+
   #instagram .four,#github .four, #youTube .four, #linkedIn .four, #twitter .four{
     -webkit-transform: rotateY(180deg) translateZ(40px);
   }
-  
+
   #instagram .five,#github .five, #youTube .five, #linkedIn .five, #twitter .five{
     -webkit-transform: rotateY(-90deg) translateZ(40px);
   }
-  
+
   #instagram .six,#github .six, #youTube .six, #linkedIn .six, #twitter .six{
     -webkit-transform: rotateX(-90deg) translateZ(40px) rotate(180deg);
   }
@@ -895,5 +895,5 @@ nav ul a{
   #email p, #resume p {
     font-size: 2em;
   }
-}
+}*/
 
